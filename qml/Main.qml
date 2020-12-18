@@ -2,7 +2,7 @@ import Felgo 3.0
 import QtQuick 2.0
 import QtQuick.Window 2.0
 
-GameWindow {
+App {
     id: app
     // main page
     NavigationStack {
@@ -15,11 +15,7 @@ GameWindow {
         BackgroundImage{
             id:pic
             anchors.fill: parent
-
-            source:"file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
-
-
-
+            source:"../1422-1.png"
 
         Column {
           anchors.centerIn: parent
@@ -57,6 +53,13 @@ GameWindow {
                   mainPage.navigationStack.push(professionalPage1)
               }
           }
+          AppButton{
+              text: "Exit"
+              textColor: "black"
+              backgroundColor: "lightsteelblue"
+              backgroundColorPressed: "blue"
+              onClicked: Qt.quit()
+          }
         }
       }
     }
@@ -68,7 +71,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -154,7 +157,7 @@ GameWindow {
             backgroundColor: "#A580C8"
             BackgroundImage{
                 anchors.fill: parent
-                source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+                source: "../1422-1.png"
 
             AppButton{
                 text: "Correct Answer"
@@ -172,7 +175,7 @@ GameWindow {
             backgroundColor: "#A580C8"
             BackgroundImage{
                 anchors.fill: parent
-                source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+                source: "../1422-1.png"
 
             AppButton{
                 text: "Wrong Answer"
@@ -189,7 +192,7 @@ GameWindow {
         title: " Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -277,7 +280,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -365,7 +368,7 @@ GameWindow {
         title: " Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -457,7 +460,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -547,7 +550,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -636,7 +639,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -725,7 +728,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -815,7 +818,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -904,7 +907,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -995,7 +998,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -1084,7 +1087,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -1173,7 +1176,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -1262,7 +1265,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -1351,7 +1354,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -1440,7 +1443,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -1529,7 +1532,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -1618,7 +1621,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -1707,7 +1710,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -1795,7 +1798,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -1883,7 +1886,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -1971,7 +1974,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -2059,7 +2062,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -2148,7 +2151,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -2237,7 +2240,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -2326,7 +2329,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -2416,7 +2419,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
         AppText{
             anchors.horizontalCenter: parent.horizontalCenter
@@ -2505,7 +2508,7 @@ GameWindow {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "file:///C:/Users/user/Documents/New folder/multimediaProject/1422-1.png"
+            source: "../1422-1.png"
 
 
 }
@@ -2516,39 +2519,7 @@ GameWindow {
             font.pointSize: 20
             color: "#3D35D3"
         }
-
         }
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
