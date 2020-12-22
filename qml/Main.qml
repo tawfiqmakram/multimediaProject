@@ -1,29 +1,66 @@
 import Felgo 3.0
 import QtQuick 2.0
 import QtQuick.Window 2.0
+import QtMultimedia 5.9
 
 App {
     id: app
     // main page
-    NavigationStack {
-      Page {
-        id: mainPage
 
-        title: " MAIN PAGE"
+
+
+
+
+       NavigationStack {
+
+
+          Page {
+          id: mainPage
+
+
+
+
+
+        SoundEffect{
+            id: clicksound
+            source: "Clapping hand(sound effect) (mp3cut.net).wav"
+
+        }
+        SoundEffect{
+            id: wronganswer
+            source: "wrong.wav"
+        }
+        SoundEffect{
+            id: buttonss
+            source: "buttonss.wav"
+        }
+        SoundEffect{
+            id:byebye
+            source: "bye.wav"
+        }
+
 
 
         BackgroundImage{
             id:pic
             anchors.fill: parent
-            source:"../1422-1.png"
+            source:"../—Pngtree—61 children s playground roller_1064185.jpg"
 
         Column {
           anchors.centerIn: parent
 
           // text to show the current count and button to push the second page
           AppText{
-              anchors.horizontalCenter: parent.horizontalCenter
+
               text: "Start Game"
+              fontSize: 35
+              x : 40
+              color: "white"
+              bottomPadding: 20
+
+
+
+
           }
 
           AppButton {
@@ -32,6 +69,12 @@ App {
               textColor: "black"
               backgroundColor: "lightsteelblue"
               backgroundColorPressed: "green"
+              textSize: 32
+              width: 300
+              height: 80
+              radius: 100
+              fontBold: true
+              onClicked: buttonss.play()
 
           }
           AppButton {
@@ -40,6 +83,14 @@ App {
               textColor: "black"
               backgroundColor: "lightsteelblue"
               backgroundColorPressed: "yellow"
+              textSize: 32
+              width: 300
+              height: 80
+              radius: 100
+              fontBold: true
+              onClicked: buttonss.play()
+
+
 
           }
           AppButton {
@@ -48,8 +99,13 @@ App {
               textColor: "black"
               backgroundColor: "lightsteelblue"
               backgroundColorPressed: "red "
-
+              textSize: 32
+              width: 300
+              height: 80
+              radius: 100
+              fontBold: true
               onClicked: {
+                  buttonss.play()
                   mainPage.navigationStack.push(professionalPage1)
               }
           }
@@ -58,7 +114,15 @@ App {
               textColor: "black"
               backgroundColor: "lightsteelblue"
               backgroundColorPressed: "blue"
-              onClicked: Qt.quit()
+              textSize: 32
+              width: 300
+              height: 80
+              radius: 100
+              fontBold: true
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
           }
         }
       }
@@ -71,11 +135,15 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
+
             text: "Choose Word Starts with (أ)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -83,17 +151,28 @@ App {
             text: "أرنب"
             textColor: "black"
             backgroundColor: "lightsteelblue"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
+            x:100
             backgroundColorPressed: "green"
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
           }
           AppButton {
             text: "بطة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
             backgroundColorPressed: "red"
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
+
 
 
           }
@@ -102,6 +181,13 @@ App {
             textColor: "black"
             backgroundColor: "lightsteelblue"
             backgroundColorPressed: "red"
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
+
 //            onClicked: mainPage.navigationStack.push(counterPageComponent1)
 
 
@@ -111,6 +197,12 @@ App {
             textColor: "black"
             backgroundColor: "lightsteelblue"
             backgroundColorPressed: "red"
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 //            onClicked: mainPage.navigationStack.push(counterPageComponent1)
 
@@ -121,28 +213,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage2)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage2)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -150,53 +266,21 @@ App {
       }
     }
     }
-    Component{
-        id:counterPageComponent
-        Page{
-//            title: "اجابتك هنا "
-            backgroundColor: "#A580C8"
-            BackgroundImage{
-                anchors.fill: parent
-                source: "../1422-1.png"
 
-            AppButton{
-                text: "Correct Answer"
-                anchors.centerIn: parent
-                backgroundColor: "green"
-            }
-        }
-
-  }
-  }
-    Component{
-        id:counterPageComponent1
-        Page{
-//            title: "اجابتك هنا "
-            backgroundColor: "#A580C8"
-            BackgroundImage{
-                anchors.fill: parent
-                source: "../1422-1.png"
-
-            AppButton{
-                text: "Wrong Answer"
-                anchors.centerIn: parent
-                backgroundColor: "red"
-            }
-        }
-
-  }
-  }
     Component {
       id: professionalPage2
       Page {
         title: " Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ب)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -205,17 +289,28 @@ App {
             textColor: "black"
             backgroundColor: "lightsteelblue"
             backgroundColorPressed: "red"
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
+
+
 
           }
           AppButton {
             text: "برتقالة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
 
           }
@@ -224,8 +319,12 @@ App {
             textColor: "black"
             backgroundColor: "lightsteelblue"
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -234,8 +333,12 @@ App {
             textColor: "black"
             backgroundColor: "lightsteelblue"
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -244,33 +347,56 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage3)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage3)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
         }
-
       }
     }
     }
@@ -280,11 +406,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ت)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -293,8 +422,13 @@ App {
             textColor: "black"
             backgroundColor: "lightsteelblue"
             backgroundColorPressed: "red"
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
 
           }
           AppButton {
@@ -302,8 +436,13 @@ App {
             textColor: "black"
             backgroundColor: "lightsteelblue"
             backgroundColorPressed: "red"
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
 
 
 
@@ -313,8 +452,13 @@ App {
             textColor: "black"
             backgroundColor: "lightsteelblue"
             backgroundColorPressed: "green"
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
 
 
           }
@@ -323,8 +467,13 @@ App {
             textColor: "black"
             backgroundColor: "lightsteelblue"
             backgroundColorPressed: "red"
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
 
 
           }
@@ -333,28 +482,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage4)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage4)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -368,11 +541,14 @@ App {
         title: " Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ث)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -381,8 +557,12 @@ App {
             textColor: "black"
             backgroundColor: "lightsteelblue"
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           AppButton {
@@ -390,8 +570,12 @@ App {
             textColor: "black"
             backgroundColor: "lightsteelblue"
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
 
 
@@ -401,8 +585,12 @@ App {
             textColor: "black"
             backgroundColor: "lightsteelblue"
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -411,8 +599,12 @@ App {
             textColor: "black"
             backgroundColor: "lightsteelblue"
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -421,28 +613,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage5)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage5)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -460,11 +676,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ج)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -472,19 +691,27 @@ App {
             text: "دراجة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "رجل"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -492,20 +719,28 @@ App {
             text: "معلم"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           AppButton {
             text: "جبل"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
           }
           Row{
@@ -513,28 +748,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage6)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage6)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -550,11 +809,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ح)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -562,20 +824,27 @@ App {
             text: "هاتف"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "فيل"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -583,20 +852,28 @@ App {
             text: "حيوان"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
           }
           AppButton {
             text: "كمبيوتر"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           Row{
@@ -604,28 +881,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage7)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage7)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -639,11 +940,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: " Choose Word Starts With (خ)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -651,19 +955,27 @@ App {
             text: "حصان"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "عصفور"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -671,49 +983,80 @@ App {
             text: "خروف"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
           }
           AppButton {
             text: "قرد"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           Row{
           AppButton{
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage8)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage8)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -728,11 +1071,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (د)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -740,19 +1086,27 @@ App {
             text: "دبابة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
           }
           AppButton {
             text: "باب"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -760,9 +1114,14 @@ App {
             text: "مهندس"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -770,39 +1129,66 @@ App {
             text: "سحاب"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           Row{
           AppButton{
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage9)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage9)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -818,11 +1204,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ذ)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -830,19 +1219,27 @@ App {
             text: "بجعة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "ظابط"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -850,9 +1247,14 @@ App {
             text: "ذئب"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
 
           }
@@ -860,10 +1262,14 @@ App {
             text: "قمر"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           Row{
@@ -871,28 +1277,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage10)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage10)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -907,11 +1337,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ر)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -919,41 +1352,54 @@ App {
             text: "جماد"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "مستشفي"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           AppButton {
             text: "عصفور"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "ريح"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
           }
           Row{
@@ -961,28 +1407,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage11)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage11)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -998,11 +1468,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ز)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -1010,20 +1483,27 @@ App {
             text: "زرافة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
           }
           AppButton {
             text: "فاكهة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -1031,49 +1511,79 @@ App {
             text: "طالب"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "ضباب"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           Row{
           AppButton{
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage12)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage12)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -1087,11 +1597,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (س)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -1099,41 +1612,55 @@ App {
             text: "شمس"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "سفينة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
           }
           AppButton {
             text: "صنارة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           AppButton {
             text: "كوكب"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           Row{
@@ -1141,28 +1668,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage13)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage13)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -1176,11 +1727,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ش)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -1188,40 +1742,55 @@ App {
             text: "سرير"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "خزانة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           AppButton {
             text: "شمس"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
           }
           AppButton {
             text: "محيط"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           Row{
@@ -1229,28 +1798,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage14)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage14)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -1265,11 +1858,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ص)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -1277,20 +1873,27 @@ App {
             text: "صباح"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
           }
           AppButton {
             text: "مساء"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -1298,49 +1901,80 @@ App {
             text: "زهرة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           AppButton {
             text: "ىاسمين"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           Row{
           AppButton{
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage15)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage15)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -1354,11 +1988,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ض)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -1366,30 +2003,41 @@ App {
             text: "عين"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "ضبع"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
           }
           AppButton {
             text: "تمساح"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -1397,10 +2045,14 @@ App {
             text: "يابس"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           Row{
@@ -1408,28 +2060,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage16)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage16)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -1443,11 +2119,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ط)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -1455,41 +2134,55 @@ App {
             text: "جمال"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "طائرة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
           }
           AppButton {
             text: "ظرف"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           AppButton {
             text: "كورة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           Row{
@@ -1497,28 +2190,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage17)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage17)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -1532,11 +2249,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ظ)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -1544,20 +2264,27 @@ App {
             text: "ظابط"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
           }
           AppButton {
             text: "لاعب"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -1565,49 +2292,80 @@ App {
             text: "مدرب"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           AppButton {
             text: "ريح"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           Row{
           AppButton{
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage18)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage18)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -1621,11 +2379,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ع)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -1633,41 +2394,55 @@ App {
             text: "جماد"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "مستشفي"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-            //            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           AppButton {
             text: "غريب"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           AppButton {
             text: "عامل"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
           }
           Row{
@@ -1675,28 +2450,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage19)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage19)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -1710,11 +2509,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ف)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -1722,19 +2524,27 @@ App {
             text: "قرد"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "فوز"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
 
           }
@@ -1742,20 +2552,28 @@ App {
             text: "حمار"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           AppButton {
             text: "بجعة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           Row{
@@ -1763,28 +2581,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage20)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage20)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -1798,11 +2640,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ق)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -1810,19 +2655,27 @@ App {
             text: "قلب"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
           }
           AppButton {
             text: "جامعة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -1830,20 +2683,28 @@ App {
             text: "حمار"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           AppButton {
             text: "هواء"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           Row{
@@ -1851,28 +2712,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage21)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage21)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -1886,11 +2771,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ك)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -1898,40 +2786,54 @@ App {
             text: "فأر"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "قطة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
-
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "كلب"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
           }
           AppButton {
             text: "عصفور"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           Row{
@@ -1939,28 +2841,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage22)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage22)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -1974,11 +2900,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ل)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -1986,19 +2915,27 @@ App {
             text: "أسد"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "سماء"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -2006,20 +2943,28 @@ App {
             text: "كوكب"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           AppButton {
             text: "ليمون"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-            //            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
           }
           Row{
@@ -2027,28 +2972,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage23)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage23)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -2062,11 +3031,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (م)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -2074,20 +3046,27 @@ App {
             text: "حصان"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "مستشفي"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
 
           }
@@ -2095,20 +3074,28 @@ App {
             text: "جامعة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           AppButton {
             text: "طائرة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           Row{
@@ -2116,28 +3103,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage24)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage24)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -2151,11 +3162,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ن)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -2163,20 +3177,27 @@ App {
             text: "زهرة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "ذئب"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -2184,20 +3205,28 @@ App {
             text: "نملة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
           }
           AppButton {
             text: "شمس"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           Row{
@@ -2205,28 +3234,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage25)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage25)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -2240,11 +3293,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ه)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -2252,20 +3308,28 @@ App {
             text: "عين"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           AppButton {
             text: "هجرة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
 
           }
@@ -2273,20 +3337,28 @@ App {
             text: "ثورة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           AppButton {
             text: "تفاحة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           Row{
@@ -2294,28 +3366,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage26)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage26)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -2329,11 +3425,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (و)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -2341,20 +3440,27 @@ App {
             text: "رسالة"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
           }
           AppButton {
             text: "سؤال"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -2362,19 +3468,28 @@ App {
             text: "وجع"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
           }
           AppButton {
             text: "مزانية"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 
           }
@@ -2383,28 +3498,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage27)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage27)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -2419,11 +3558,14 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
         AppText{
-            anchors.horizontalCenter: parent.horizontalCenter
             text: "Choose Word Starts With (ي)"
+            fontSize: 35
+            topPadding:15
+            x:200
+            color: "white"
         }
         Row {
           anchors.centerIn: parent
@@ -2431,8 +3573,14 @@ App {
             text: "نعناع"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
 //            onClicked: mainPage.navigationStack.push(counterPageComponent1)
 
@@ -2441,10 +3589,14 @@ App {
             text: "ياسمين"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: clicksound.play()
 
 
           }
@@ -2452,20 +3604,28 @@ App {
             text: "حصان"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           AppButton {
             text: "ثعلب"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
-
-//            onClicked: mainPage.navigationStack.push(counterPageComponent1)
-
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           Row{
@@ -2473,28 +3633,52 @@ App {
               text: " Next  "
               textColor: "black"
               backgroundColor: "lightsteelblue"
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
 
-              onClicked: mainPage.navigationStack.push(professionalPage28)
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(professionalPage28)
+              }
 
-              x:350
-              y:350
+              x:-120
+              y:150
           }
           AppButton{
               text: "MainPage"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: mainPage.navigationStack.push(mainPage)
-              x:300
-              y:350
+              onClicked:{
+                  buttonss.play()
+                  mainPage.navigationStack.push(mainPage)
+              }
+              x:80
+              y:150
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
           }
           AppButton{
               text: "Exit"
               textColor: "black"
               backgroundColor: "lightsteelblue"
-              onClicked: Qt.quit()
-
+              onClicked:{
+                  byebye.play()
+                  Qt.quit()
+              }
+              textSize: 32
+              width: 150
+              height: 80
+              radius: 100
+              fontBold: true
               x:250
-              y:350
+              y:150
+
 
           }
           }
@@ -2508,7 +3692,7 @@ App {
         title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
-            source: "../1422-1.png"
+            source: "../pages.jpg"
 
 
 }
@@ -2519,7 +3703,47 @@ App {
             font.pointSize: 20
             color: "#3D35D3"
         }
-        }
+//        Row{
+//            spacing: 50
+//        AppButton{
+//            text: "MainPage"
+//            textColor: "black"
+//            backgroundColor: "lightsteelblue"
+//            onClicked:{
+//                buttonss.play()
+//                mainPage.navigationStack.push(mainPage)
+//            }
+//            x:80
+//            y:150
+//            textSize: 32
+//            width: 150
+//            height: parent.width/4
+//            radius: parent.height/4
+//            fontBold: true
+//        }
+//        AppButton{
+//            text: "Exit"
+//            textColor: "black"
+//            backgroundColor: "lightsteelblue"
+//            onClicked:{
+//                byebye.play()
+//                Qt.quit()
+//            }
+//            textSize: 32
+//            width: parent.width/4
+//            height: parent.height/4
+//            radius: 100
+//            fontBold: true
+//            x:250
+//            y:150
+
+
+
+//        }
+
+//      }
+      }
 }
 }
+
 
