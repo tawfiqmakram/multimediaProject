@@ -172,7 +172,7 @@ App {
                       width: 200
                       height: 250
                       //fillMode :Image.PreserveAspectCrop
-                      source: "../rabbit2.png"
+                      source: "../swr el klmat/rabbit2.png"
                       radius: 300
                    //   RoundedImage:animation.running
 
@@ -333,21 +333,53 @@ App {
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id:duck
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/batta.png"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ب.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: batta
                       source: "../Sounds/Batta.Wav"
                   }
+
+
                   SoundEffect{
                       id: beh
                       source: "../Sounds/Beh.Wav"
@@ -355,11 +387,21 @@ App {
 
 
                  // Row{
-                      //anchors.centerIn: parent
-
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: duck             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "بطة"
-
+                          property var duck
                           textSize: 32
                           textColor: "black"
                           backgroundColor: "lightsteelblue"
@@ -370,13 +412,27 @@ App {
                           height: 80
                           radius: 100
                           fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              batta.play()
 
-                          onClicked: batta.play()
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ب"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:beh.play()
 
                      }
@@ -385,7 +441,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -401,8 +457,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage3)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -410,12 +466,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -433,13 +490,13 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
+
 
               }
 //}
@@ -448,33 +505,75 @@ App {
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id:apple
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/apple.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ت.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: tofa7a
                       source: "../Sounds/tofa7a.Wav"
                   }
+
+
                   SoundEffect{
                       id: teh
-                      source: "../Sounds/Teh.Wav"
+                      source: "../Sounds/teh.Wav"
                   }
 
 
-                  //Row{
-                      //anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: apple             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "تفاحة"
-
+                          property var apple
                           textSize: 32
                           textColor: "black"
                           backgroundColor: "lightsteelblue"
@@ -485,12 +584,27 @@ App {
                           height: 80
                           radius: 100
                           fontBold: true
-                          onClicked: tofa7a.play()
+                          enabled: !animation.running
+                          onClicked:{
+                              tofa7a.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ت"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:teh.play()
 
                      }
@@ -499,7 +613,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -515,8 +629,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage4)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -524,12 +638,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -547,11 +662,10 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
-                  }
                   }
                   }
 
@@ -562,40 +676,106 @@ App {
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id:snake
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/snake.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ث.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: so3ban
                       source: "../Sounds/so3ban.Wav"
                   }
+
+
                   SoundEffect{
                       id: theh
                       source: "../Sounds/theh.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: snake             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "ثعبان"
-                          x: 100
+                          property var so3ban
                           textSize: 32
-                          onClicked: so3ban.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              so3ban.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ث"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:theh.play()
 
                      }
@@ -604,7 +784,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -620,8 +800,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage5)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -629,12 +809,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -652,55 +833,119 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
 
-              }
           }
           Component{
               id: beginnerPage5
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id:camel
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/camel.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ج.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: gamal
                       source: "../Sounds/gamal.Wav"
                   }
+
+
                   SoundEffect{
                       id: geem
                       source: "../Sounds/geem.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: camel             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "جمل"
-                          x: 100
+                          property var so3ban
                           textSize: 32
-                          onClicked: gamal.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              gamal.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ج"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:geem.play()
 
                      }
@@ -709,7 +954,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -725,8 +970,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage6)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -734,12 +979,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -757,55 +1003,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage6
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id:hourse
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/hourse.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ح.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: hosan
                       source: "../Sounds/7osan.Wav"
                   }
+
+
                   SoundEffect{
                       id: hah
                       source: "../Sounds/hah.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: hourse             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "حصان"
-                          x: 100
+                          property var hosan
                           textSize: 32
-                          onClicked: hosan.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              hosan.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ح"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:hah.play()
 
                      }
@@ -814,7 +1123,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -830,8 +1139,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage7)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -839,12 +1148,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -862,55 +1172,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage7
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id:lamb
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/kharof.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف خ.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
-                      id: kharouf
+                      id: kharof
                       source: "../Sounds/kharof.Wav"
                   }
+
+
                   SoundEffect{
                       id: khah
                       source: "../Sounds/khah.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: lamb             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "خروف"
-                          x: 100
+                          property var kharof
                           textSize: 32
-                          onClicked: kharouf.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              kharof.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "خ"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:khah.play()
 
                      }
@@ -919,7 +1292,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -935,8 +1308,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage8)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -944,12 +1317,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -967,55 +1341,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage8
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id:bear
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/bear (2).jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف د.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: dob
                       source: "../Sounds/dob.Wav"
                   }
+
+
                   SoundEffect{
                       id: dal
                       source: "../Sounds/dal.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: bear             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "دب"
-                          x: 100
+                          property var dob
                           textSize: 32
-                          onClicked: dob.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              dob.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "د"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:dal.play()
 
                      }
@@ -1024,7 +1461,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -1040,8 +1477,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage9)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -1049,12 +1486,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -1072,55 +1510,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage9
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id:zel
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/zel.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ذ.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: zeel
                       source: "../Sounds/zeel.Wav"
                   }
+
+
                   SoundEffect{
                       id: zal
                       source: "../Sounds/zal.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: zel             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "ذيل"
-                          x: 100
+                          property var zeel
                           textSize: 32
-                          onClicked: zeel.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              zeel.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ذ"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:zal.play()
 
                      }
@@ -1129,7 +1630,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -1145,8 +1646,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage10)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -1154,12 +1655,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -1177,55 +1679,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage10
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: head
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/head-man_1308-33466.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ر.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: raas
                       source: "../Sounds/raas.Wav"
                   }
+
+
                   SoundEffect{
                       id: reh
                       source: "../Sounds/reh.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: head             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
-                          text: "رأس"
-                          x: 100
+                          text: "راس"
+                          property var raas
                           textSize: 32
-                          onClicked: raas.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              raas.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ر"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:reh.play()
 
                      }
@@ -1234,7 +1799,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -1250,8 +1815,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage11)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -1259,12 +1824,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -1282,55 +1848,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage11
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: giraffe
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/giraffe (2).jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ز.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: zarafa
                       source: "../Sounds/zarafa.Wav"
                   }
+
+
                   SoundEffect{
                       id: zeen
                       source: "../Sounds/zeen.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: giraffe             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "زرافة"
-                          x: 100
+                          property var zarafa
                           textSize: 32
-                          onClicked: zarafa.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              zarafa.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ز"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:zeen.play()
 
                      }
@@ -1339,7 +1968,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -1355,8 +1984,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage12)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -1364,12 +1993,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -1387,55 +2017,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage12
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: fish
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/fish.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف س.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: samaka
                       source: "../Sounds/samaka.Wav"
                   }
+
+
                   SoundEffect{
                       id: seen
                       source: "../Sounds/seen.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: fish             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "سمكة"
-                          x: 100
+                          property var samaka
                           textSize: 32
-                          onClicked: samaka.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              samaka.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "س"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:seen.play()
 
                      }
@@ -1444,7 +2137,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -1460,8 +2153,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage13)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -1469,12 +2162,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -1492,55 +2186,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage13
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: tree
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/tree.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ش.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: shagara
                       source: "../Sounds/shagara.Wav"
                   }
+
+
                   SoundEffect{
                       id: sheen
                       source: "../Sounds/sheen.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: tree             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "شجرة"
-                          x: 100
+                          property var shagara
                           textSize: 32
-                          onClicked: shagara.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              shagara.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ش"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:sheen.play()
 
                      }
@@ -1549,7 +2306,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -1565,8 +2322,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage14)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -1574,12 +2331,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -1597,55 +2355,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage14
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: falcon
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/falcon.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ص.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: saqr
                       source: "../Sounds/saqr.Wav"
                   }
+
+
                   SoundEffect{
                       id: sad
                       source: "../Sounds/sad.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: falcon             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "صقر"
-                          x: 100
+                          property var saqr
                           textSize: 32
-                          onClicked: saqr.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              saqr.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ص"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:sad.play()
 
                      }
@@ -1654,7 +2475,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -1670,8 +2491,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage15)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -1679,12 +2500,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -1702,55 +2524,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage15
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: frog
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/frog.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ض.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: dofdaa
                       source: "../Sounds/dofdaa.Wav"
                   }
+
+
                   SoundEffect{
                       id: dad
                       source: "../Sounds/dad.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: frog             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "ضفدع"
-                          x: 100
+                          property var dofdaa
                           textSize: 32
-                          onClicked: dofdaa.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              dofdaa.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ض"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:dad.play()
 
                      }
@@ -1759,7 +2644,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -1775,8 +2660,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage16)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -1784,12 +2669,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -1807,55 +2693,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage16
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: bird
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/bird.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ط.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: taer
                       source: "../Sounds/taer.Wav"
                   }
+
+
                   SoundEffect{
                       id: tah
                       source: "../Sounds/tah.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: bird             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "طائر"
-                          x: 100
+                          property var taer
                           textSize: 32
-                          onClicked: taer.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              taer.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ط"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:tah.play()
 
                      }
@@ -1864,7 +2813,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -1880,8 +2829,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage17)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -1889,12 +2838,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -1912,55 +2862,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage17
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: letter
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/letter.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ظ.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: zarf
                       source: "../Sounds/zarf.Wav"
                   }
+
+
                   SoundEffect{
                       id: zah
                       source: "../Sounds/zah.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: letter             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "ظرف"
-                          x: 100
+                          property var zarf
                           textSize: 32
-                          onClicked: zarf.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              zarf.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ظ"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:zah.play()
 
                      }
@@ -1969,7 +2982,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -1985,8 +2998,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage18)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -1994,12 +3007,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -2017,55 +3031,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage18
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: eyes
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/eyes.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ع.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
-                  SoundEffect{
-                      id: ayn
-                      source: "../Sounds/ayn.Wav"
-                  }
+
                   SoundEffect{
                       id: aen
                       source: "../Sounds/aen.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
+                  SoundEffect{
+                      id: ayn
+                      source: "../Sounds/ayn.Wav"
+                  }
 
+
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: eyes             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "عين"
-                          x: 100
+                          property var aen
                           textSize: 32
-                          onClicked: ayn.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              ayn.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ع"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:aen.play()
 
                      }
@@ -2074,7 +3151,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -2090,8 +3167,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage19)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -2099,12 +3176,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -2122,30 +3200,56 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage19
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: gzr
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/gzr.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف غ.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
 
@@ -2153,25 +3257,61 @@ App {
                       id: ghosn
                       source: "../Sounds/ghosn.Wav"
                   }
+
+
                   SoundEffect{
                       id: ghayn
                       source: "../Sounds/ghayn.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: gzr             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "غصن"
-                          x: 100
+                          property var ghosn
                           textSize: 32
-                          onClicked: ghosn.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              ghosn.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "غ"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:ghayn.play()
 
                      }
@@ -2180,7 +3320,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -2196,8 +3336,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage20)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -2205,12 +3345,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -2228,55 +3369,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage20
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: elephant
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/elephant.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ف.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: feel
                       source: "../Sounds/feel.Wav"
                   }
+
+
                   SoundEffect{
                       id: feh
                       source: "../Sounds/feh.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: elephant             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "فيل"
-                          x: 100
+                          property var feel
                           textSize: 32
-                          onClicked: feel.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              feel.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ف"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:feh.play()
 
                      }
@@ -2285,7 +3489,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -2301,8 +3505,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage21)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -2310,12 +3514,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -2333,55 +3538,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage21
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: pen
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/pen.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ق.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: qalam
                       source: "../Sounds/qalam.Wav"
                   }
+
+
                   SoundEffect{
                       id: qaf
                       source: "../Sounds/qaf.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: pen             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "قلم"
-                          x: 100
+                          property var qalam
                           textSize: 32
-                          onClicked: qalam.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              qalam.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ق"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:qaf.play()
 
                      }
@@ -2390,7 +3658,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -2406,8 +3674,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage22)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -2415,12 +3683,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -2438,55 +3707,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage22
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: book
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/book.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ك.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: ketab
                       source: "../Sounds/ketab.Wav"
                   }
+
+
                   SoundEffect{
                       id: kaf
                       source: "../Sounds/kaf.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: book             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "كتاب"
-                          x: 100
+                          property var ketab
                           textSize: 32
-                          onClicked: ketab.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              ketab.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ك"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:kaf.play()
 
                      }
@@ -2495,112 +3827,7 @@ App {
 
 
 
-                  Row{
-                  AppButton{
-                      text: " Next  "
-                      textColor: "black"
-                      backgroundColor: "lightsteelblue"
-                      textSize: 32
-                      width: 150
-                      height: 80
-                      radius: 100
-                      fontBold: true
-
-                      onClicked:{
-                          buttonss.play()
-                          mainPage.navigationStack.push(beginnerPage23)
-                      }
-
-                      x:-120
-                      y:150
-                  }
-                  AppButton{
-                      text: "MainPage"
-                      textColor: "black"
-                      backgroundColor: "lightsteelblue"
-                      onClicked:{
-                          buttonss.play()
-                          mainPage.navigationStack.push(mainPage)
-                      }
-                      x:80
-                      y:150
-                      textSize: 32
-                      width: 150
-                      height: 80
-                      radius: 100
-                      fontBold: true
-                  }
-                  AppButton{
-                      text: "Exit"
-                      textColor: "black"
-                      backgroundColor: "lightsteelblue"
-                      onClicked:{
-                          byebye.play()
-                          Qt.quit()
-                      }
-                      textSize: 32
-                      width: 150
-                      height: 80
-                      radius: 100
-                      fontBold: true
-                      x:250
-                      y:150
-
-
-                  }
-                  }
-                  }
-
-              }
-          }
-          Component{
-              id: beginnerPage23
-              Page{
-                  title: "Beginner Level"
-                  BackgroundImage{
-                      anchors.fill: parent
-                      source: "../pages.jpg"
-                  }
-                  AppText{
-                      text: "Press on the letter and the word:"
-                      fontSize: 40
-                      topPadding:10
-                      x:200
-                      color: "black"
-
-                  }
-                  SoundEffect{
-                      id: leba
-                      source: "../Sounds/leba.Wav"
-                  }
-                  SoundEffect{
-                      id: lam
-                      source: "../Sounds/lam.Wav"
-                  }
-
-
-                  Row{
-                      anchors.centerIn: parent
-
-                      AppButton{
-                          text: "لعبة"
-                          x: 100
-                          textSize: 32
-                          onClicked: leba.play()
-                      }
-                     AppButton{
-                         text: "ل"
-                         x: 100
-                         textSize: 32
-                        onClicked:lam.play()
-
-                     }
-
-
-
-
-
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -2616,8 +3843,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage24)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -2625,12 +3852,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -2648,55 +3876,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage24
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: school
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/school.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف م.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: madrasa
                       source: "../Sounds/madrasa.Wav"
                   }
+
+
                   SoundEffect{
                       id: meem
                       source: "../Sounds/meem.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: school             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "مدرسة"
-                          x: 100
+                          property var ketab
                           textSize: 32
-                          onClicked: madrasa.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              madrasa.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "م"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:meem.play()
 
                      }
@@ -2705,7 +3996,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -2721,8 +4012,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage25)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -2730,12 +4021,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -2753,55 +4045,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage25
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: palm
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/palm.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ن.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: nakhla
                       source: "../Sounds/nakhla.Wav"
                   }
+
+
                   SoundEffect{
                       id: noon
                       source: "../Sounds/noon.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: palm             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "نخلة"
-                          x: 100
+                          property var nakhla
                           textSize: 32
-                          onClicked: nakhla.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              nakhla.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ن"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:noon.play()
 
                      }
@@ -2810,7 +4165,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -2826,8 +4181,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage26)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -2835,12 +4190,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -2858,55 +4214,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage26
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: gift
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/gift.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ه.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: hedya
                       source: "../Sounds/hedya.Wav"
                   }
+
+
                   SoundEffect{
                       id: heh
                       source: "../Sounds/heh.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: gift             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "هدية"
-                          x: 100
+                          property var hedya
                           textSize: 32
-                          onClicked: hedya.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              hedya.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ه"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:heh.play()
 
                      }
@@ -2915,7 +4334,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -2931,8 +4350,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage27)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -2940,12 +4359,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -2963,55 +4383,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage27
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: flowers
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/flowers.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف و.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: warda
                       source: "../Sounds/warda.Wav"
                   }
+
+
                   SoundEffect{
                       id: wow
                       source: "../Sounds/wow.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: flowers             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "وردة"
-                          x: 100
+                          property var warda
                           textSize: 32
-                          onClicked: warda.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              warda.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "و"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:wow.play()
 
                      }
@@ -3020,7 +4503,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -3036,8 +4519,8 @@ App {
                           mainPage.navigationStack.push(beginnerPage28)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -3045,12 +4528,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -3068,55 +4552,118 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
           Component{
               id: beginnerPage28
               Page{
                   title: "Beginner Level"
                   BackgroundImage{
+
                       anchors.fill: parent
                       source: "../pages.jpg"
                   }
+                  RoundedImage{
+                      id: hand
+                      x:100
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../swr el klmat/hand.jpg"
+                      radius: 300
+                   //   RoundedImage:animation.running
+
+                  }
+                  RoundedImage{
+                      x:400
+                      y:150
+                      width: 200
+                      height: 250
+                      //fillMode :Image.PreserveAspectCrop
+                      source: "../الحروف/الحرف ى.png"
+                      radius: 300
+                  }
+
+
                   AppText{
+                      anchors.left: parent
                       text: "Press on the letter and the word:"
                       fontSize: 40
                       topPadding:10
                       x:200
                       color: "black"
+                      font.bold: true
+                      font.capitalization: Font.AllUppercase
+
+
 
                   }
+
                   SoundEffect{
                       id: yad
                       source: "../Sounds/yad.Wav"
                   }
+
+
                   SoundEffect{
                       id: yeh
                       source: "../Sounds/yeh.Wav"
                   }
 
 
-                  Row{
-                      anchors.centerIn: parent
-
+                 // Row{
+                //      x:100
+                     // anchors.centerIn: parent
+                  NumberAnimation {
+                          id: animation
+                          target: hand             // The animated item id
+                          property: "rotation"      // The animated property
+                          from: 0                   // Start value. If not defined, the current value is used
+                          to: 360                   // End value
+                          duration: 1000
+                          // Duration of the animation
+                          easing.type: Easing.InOutBack
+                        }
                       AppButton{
                           text: "يد"
-                          x: 100
+                          property var yad
                           textSize: 32
-                          onClicked: yad.play()
+                          textColor: "black"
+                          backgroundColor: "lightsteelblue"
+                          x:120
+                          y:420
+                          backgroundColorPressed: "green"
+                          width: 150
+                          height: 80
+                          radius: 100
+                          fontBold: true
+                          enabled: !animation.running
+                          onClicked:{
+                              yad.play()
+
+
+                              animation.start()
+
+                      }
                       }
                      AppButton{
                          text: "ي"
-                         x: 100
                          textSize: 32
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         x:430
+                         y:420
+                         backgroundColorPressed: "green"
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
                         onClicked:yeh.play()
 
                      }
@@ -3125,7 +4672,7 @@ App {
 
 
 
-                  Row{
+                 // Row{
                   AppButton{
                       text: " Next  "
                       textColor: "black"
@@ -3138,11 +4685,11 @@ App {
 
                       onClicked:{
                           buttonss.play()
-                          mainPage.navigationStack.push(beginnerPage29)
+                          mainPage.navigationStack.push(beginnerlPage29)
                       }
 
-                      x:-120
-                      y:150
+                      x:400
+                      y:600
                   }
                   AppButton{
                       text: "MainPage"
@@ -3150,12 +4697,13 @@ App {
                       backgroundColor: "lightsteelblue"
                       onClicked:{
                           buttonss.play()
+                          background.play()
                           mainPage.navigationStack.push(mainPage)
                       }
-                      x:80
-                      y:150
+                      x:550
+                      y:600
                       textSize: 32
-                      width: 150
+                     // width: 150
                       height: 80
                       radius: 100
                       fontBold: true
@@ -3173,15 +4721,12 @@ App {
                       height: 80
                       radius: 100
                       fontBold: true
-                      x:250
-                      y:150
+                      x:770
+                      y:600
 
 
                   }
                   }
-                  }
-
-              }
           }
 
 
@@ -3201,6 +4746,41 @@ App {
                   font.bold: true
                   font.pointSize: 20
                   color: "#3D35D3"
+              }
+              AppButton{
+                  text: "MainPage"
+                  textColor: "black"
+                  backgroundColor: "lightsteelblue"
+                  onClicked:{
+                      buttonss.play()
+                      background.play()
+                      mainPage.navigationStack.push(mainPage)
+                  }
+                  x:550
+                  y:600
+                  textSize: 32
+                 // width: 150
+                  height: 80
+                  radius: 100
+                  fontBold: true
+              }
+              AppButton{
+                  text: "Exit"
+                  textColor: "black"
+                  backgroundColor: "lightsteelblue"
+                  onClicked:{
+                      byebye.play()
+                      Qt.quit()
+                  }
+                  textSize: 32
+                  width: 150
+                  height: 80
+                  radius: 100
+                  fontBold: true
+                  x:770
+                  y:600
+
+
               }
 
             }
@@ -3363,11 +4943,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ب)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ب)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -3496,11 +5082,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ت)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ت)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -3625,17 +5217,23 @@ App {
     Component {
       id: professionalPage4
       Page {
-        title: " Professional Level "
+        title: "Professional Level "
         BackgroundImage{
             anchors.fill: parent
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ث)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ث)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -3643,6 +5241,35 @@ App {
             text: "قطار"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
+            backgroundColorPressed: "red"
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
+          }
+          AppButton {
+            text: "رجل"
+            textColor: "black"
+            backgroundColor: "lightsteelblue"
+            x:100
+            backgroundColorPressed: "red"
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
+
+
+          }
+          AppButton {
+            text: "بيت"
+            textColor: "black"
+            backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "red"
             textSize: 32
             width: 150
@@ -3656,6 +5283,7 @@ App {
             text: "ثعلب"
             textColor: "black"
             backgroundColor: "lightsteelblue"
+            x:100
             backgroundColorPressed: "green"
             textSize: 32
             width: 150
@@ -3663,36 +5291,6 @@ App {
             radius: 100
             fontBold: true
             onClicked: clicksound.play()
-
-
-
-          }
-          AppButton {
-            text: "بيت"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "تمساح"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
 
           }
           Row{
@@ -3753,10 +5351,6 @@ App {
       }
     }
     }
-
-
-
-
     Component {
       id: professionalPage5
       Page {
@@ -3766,11 +5360,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ج)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ج)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -3899,11 +5499,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ح)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ح)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -4030,11 +5636,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: " Choose Word Starts With (خ)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (خ)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -4161,11 +5773,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (د)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (د)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -4294,11 +5912,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ذ)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ذ)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -4427,11 +6051,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ر)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ر)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -4558,11 +6188,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ز)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ز)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -4687,11 +6323,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (س)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (س)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -4817,11 +6459,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ش)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ش)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -4948,11 +6596,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ص)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ص)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -5078,11 +6732,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ض)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ض)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -5209,11 +6869,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ط)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ط)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -5339,11 +7005,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ظ)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ظ)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -5469,11 +7141,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ع)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ع)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -5599,11 +7277,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (غ)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (غ)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -5639,20 +7323,6 @@ App {
             textColor: "black"
             backgroundColor: "lightsteelblue"
             x:100
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-          }
-          AppButton {
-            text: "شجرة"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            x:100
             backgroundColorPressed: "green"
             textSize: 32
             width: 150
@@ -5660,6 +7330,20 @@ App {
             radius: 100
             fontBold: true
             onClicked: clicksound.play()
+
+          }
+          AppButton {
+            text: "شجرة"
+            textColor: "black"
+            backgroundColor: "lightsteelblue"
+            x:100
+            backgroundColorPressed: "red"
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            onClicked: wronganswer.play()
 
           }
           Row{
@@ -5729,11 +7413,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ف)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ف)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -5860,11 +7550,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ق)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ق)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -5991,11 +7687,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ك)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ك)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -6120,11 +7822,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ل)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ل)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -6251,11 +7959,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (م)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (م)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -6382,11 +8096,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ن)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ن)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -6513,11 +8233,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ه)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ه)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -6645,11 +8371,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (و)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (و)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -6778,11 +8510,17 @@ App {
             source: "../pages.jpg"
 
         AppText{
-            text: "Choose Word Starts With (ي)"
-            fontSize: 35
-            topPadding:15
+
+            text: "Choose Word Starts with (ي)"
+
+
+
+            fontSize: 40
+            topPadding:10
             x:200
-            color: "white"
+            color: "black"
+            font.bold: true
+            font.capitalization: Font.AllUppercase
         }
         Row {
           anchors.centerIn: parent
@@ -6919,6 +8657,41 @@ App {
             font.bold: true
             font.pointSize: 20
             color: "#3D35D3"
+        }
+        AppButton{
+            text: "MainPage"
+            textColor: "black"
+            backgroundColor: "lightsteelblue"
+            onClicked:{
+                buttonss.play()
+                background.play()
+                mainPage.navigationStack.push(mainPage)
+            }
+            x:550
+            y:600
+            textSize: 32
+           // width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+        }
+        AppButton{
+            text: "Exit"
+            textColor: "black"
+            backgroundColor: "lightsteelblue"
+            onClicked:{
+                byebye.play()
+                Qt.quit()
+            }
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            x:770
+            y:600
+
+
         }
 
       }
@@ -11059,14 +12832,48 @@ App {
             font.pointSize: 20
             color: "#3D35D3"
         }
+        AppButton{
+            text: "MainPage"
+            textColor: "black"
+            backgroundColor: "lightsteelblue"
+            onClicked:{
+                buttonss.play()
+                background.play()
+                mainPage.navigationStack.push(mainPage)
+            }
+            x:550
+            y:600
+            textSize: 32
+           // width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+        }
+        AppButton{
+            text: "Exit"
+            textColor: "black"
+            backgroundColor: "lightsteelblue"
+            onClicked:{
+                byebye.play()
+                Qt.quit()
+            }
+            textSize: 32
+            width: 150
+            height: 80
+            radius: 100
+            fontBold: true
+            x:770
+            y:600
+
+
+        }
 
 
       }
 }
 
-
-
 }
+
 
 
 
