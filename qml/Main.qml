@@ -8700,4177 +8700,4471 @@ App {
     //////////// INTERMEDIATE LEVEL ////////////////
 
     Component {
-      id: intermediatePage1
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
+          id: intermediatePage1
+          Page {
+            title: "Intermediate Level"
+            BackgroundImage{
+                anchors.fill: parent
+                source: "../pages.jpg"
+
+            AppText{
+                text: "Choose The Correct Letter To Complete The Word"
+                fontSize: 35
+                topPadding:15
+                x:200
+                color: "white"
 
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "س    _    ك    ة"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "أ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "ب"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "م"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-          }
-          AppButton {
-            text: "ر"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage2)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-
-    Component {
-      id: intermediatePage2
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: " م     د      ر    _    ة"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "س"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-          }
-          AppButton {
-            text: "ط"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ن"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "ر"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage3)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-    Component {
-      id: intermediatePage3
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "ك    _     ا    ب"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ي"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "ت"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ج"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "ل"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage4)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-
-
-
-    Component {
-      id: intermediatePage4
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "ظ    ا    _      ط"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ب"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-          }
-          AppButton {
-            text: "ت"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "أ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "ذ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage5)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-
-
-    Component {
-      id: intermediatePage5
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "ح    م     ا     _ "
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ئ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "و"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "غ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "ر"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage6)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-
-
-    Component {
-      id: intermediatePage6
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "_     ر      ن     ب  "
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "أ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-          }
-          AppButton {
-            text: "ت"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ب"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "ذ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage7)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-    Component {
-      id: intermediatePage7
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "-   ع     ل     ب"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ن"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "ر"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ث"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-          }
-          AppButton {
-            text: "ط"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage8)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-    Component {
-      id: intermediatePage8
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "ص      -      ر     ة"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "د"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "ف"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "خ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-          }
-          AppButton {
-            text: "ش"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage9)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-
-    Component {
-      id: intermediatePage9
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "م     ت     ح    _ "
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ه"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "ف"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-
-          }
-          AppButton {
-            text: "خ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "ذ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage10)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-
-    Component {
-      id: intermediatePage10
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "-    ا      ف       ل      ة"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ث"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "م"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ق"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-          }
-          AppButton {
-            text: "ك"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage11)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-
-
-    Component {
-      id: intermediatePage11
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "_     ج     ر      ة"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ش"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-          }
-          AppButton {
-            text: "ل"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ه"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "ي"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage12)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-
-    Component {
-      id: intermediatePage12
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "-      ب       و       ب"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ب"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "ح"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ث"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "ج"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage13)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-
-
-
-    Component {
-      id: intermediatePage13
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "م     ر      -      ب"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ك"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-          }
-          AppButton {
-            text: "ف"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "أ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "س"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage14)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-
-    Component {
-      id: intermediatePage14
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "_      ا       ل      ب"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ظ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "ش"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ح"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "ط"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage15)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-
-
-    Component {
-      id: intermediatePage15
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "-     ي       ن        ة "
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ك"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "ت"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ز"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-          }
-          AppButton {
-            text: "ذ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage16)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-
-
-    Component {
-      id: intermediatePage16
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "ن    ا     ف    _     ة"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ذ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-          }
-          AppButton {
-            text: "د"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "أ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "ل"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage17)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-
-
-
-
-
-    Component {
-      id: intermediatePage17
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "م     -      ر      ض"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ب"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "ع"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ش"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "غ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage18)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-    Component {
-      id: intermediatePage18
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "د      -       ل       ة"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ط"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "و"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ح"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "خ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage19)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-    Component {
-      id: intermediatePage19
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "-     ه      ا     ء"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "د"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-          }
-          AppButton {
-            text: "ج"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ح"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "خ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage20)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-    Component {
-      id: intermediatePage20
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "-     ل      م      ة"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ط"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "ظ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ص"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "ض"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage21)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-
-    Component {
-      id: intermediatePage21
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "ص        -         ي       ر"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ل"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "أ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "غ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-          }
-          AppButton {
-            text: "ع"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage22)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-    Component {
-      id: intermediatePage22
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "م     -      ع       ق       ة"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ف"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "ل"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ق"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "خ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage23)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-    Component {
-      id: intermediatePage23
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "-      ح        ل        ة"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ن"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-          }
-          AppButton {
-            text: "و"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ض"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "د"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage24)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-
-    Component {
-      id: intermediatePage24
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "ف        ا        ك       -      ة"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ط"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-              text: "ه"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ي"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "خ"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage25)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-    Component {
-      id: intermediatePage25
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "ه        ج         -        م"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ز"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "ز"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "و"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-          }
-          AppButton {
-            text: "د"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage26)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-    Component {
-      id: intermediatePage26
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "م        -         ح       ف"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ط"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "ج"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ض"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "ص"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage27)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-
-    Component {
-      id: intermediatePage27
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "م        ر         ي         -"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ص"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-          }
-          AppButton {
-            text: "ض"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ب"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "ث"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage28)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-
-
-    Component {
-      id: intermediatePage28
-      Page {
-        title: "Intermediate Level"
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-        AppText{
-            text: "Choose The Correct Letter To Complete The Word"
-            fontSize: 35
-            topPadding:15
-            x:200
-            color: "white"
-
-        }
-        AppText{
-            text: "ر      -       ا        ض       ة"
-            fontSize: 40
-            x:parent.width /2
-            y:300
-            color: "black"
-        }
-
-
-        Row {
-          anchors.centerIn: parent
-          AppButton {
-            text: "ي"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "green"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: clicksound.play()
-
-
-          }
-          AppButton {
-            text: "ك"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-
-          }
-          AppButton {
-            text: "ط"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          AppButton {
-            text: "ش"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            backgroundColorPressed: "red"
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            onClicked: wronganswer.play()
-
-
-
-          }
-          Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(intermediatePage29)
-              }
-
-              x:-120
-              y:150
-          }
-          AppButton{
-              text: "MainPage"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(mainPage)
-              }
-              x:80
-              y:150
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-          }
-          AppButton{
-              text: "Exit"
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              onClicked:{
-                  byebye.play()
-                  Qt.quit()
-              }
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:250
-              y:150
-
-
-          }
-          }
-        }
-      }
-    }
-    }
-    Component {
-      id: intermediatePage29
-      Page {
-        title: "Intermediate Level "
-        BackgroundImage{
-            anchors.fill: parent
-            source: "../pages.jpg"
-
-
-}
-        Text {
-            anchors.centerIn: parent
-            text: qsTr("Congratulations You Passed The Intermediate Level Successfully")
-            font.bold: true
-            font.pointSize: 20
-            color: "#3D35D3"
-        }
-        AppButton{
-            text: "MainPage"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            onClicked:{
-                buttonss.play()
-                background.play()
-                mainPage.navigationStack.push(mainPage)
             }
-            x:550
-            y:600
-            textSize: 32
-           // width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-        }
-        AppButton{
-            text: "Exit"
-            textColor: "black"
-            backgroundColor: "lightsteelblue"
-            onClicked:{
-                byebye.play()
-                Qt.quit()
+
+            AppText{
+                text: "س    _    ك    ة"
+                fontSize: 40
+                x:parent.width /2
+                y:300
+                color: "black"
             }
-            textSize: 32
-            width: 150
-            height: 80
-            radius: 100
-            fontBold: true
-            x:770
-            y:600
+            AppText{
+                id: scoreID1
+                color: "black"
+                font.pixelSize: 25
+                font.bold: true
+                text: "Score: 0"
+                x: parent.width/7
+                y: 300
+            }
+
+            Row {
+              anchors.centerIn: parent
+              AppButton {
+                text: "أ"
+                textColor: "black"
+                backgroundColor: "lightsteelblue"
+                backgroundColorPressed: "red"
+                textSize: 32
+                width: 150
+                height: 80
+                radius: 100
+                fontBold: true
+                onClicked: wronganswer.play()
 
 
+              }
+              AppButton {
+                text: "ب"
+                textColor: "black"
+                backgroundColor: "lightsteelblue"
+                backgroundColorPressed: "red"
+                textSize: 32
+                width: 150
+                height: 80
+                radius: 100
+                fontBold: true
+                onClicked: wronganswer.play()
+
+
+
+
+              }
+              AppButton {
+                text: "م"
+                textColor: "black"
+                backgroundColor: "lightsteelblue"
+                backgroundColorPressed: "green"
+                textSize: 32
+                width: 150
+                height: 80
+                radius: 100
+                fontBold: true
+                onClicked: {
+
+                    clicksound.play()
+                    scoreID1.text ="Score: 1"
+
+    }
+
+              }
+              AppButton {
+                text: "ر"
+                textColor: "black"
+                backgroundColor: "lightsteelblue"
+                backgroundColorPressed: "red"
+                textSize: 32
+                width: 150
+                height: 80
+                radius: 100
+                fontBold: true
+                onClicked: wronganswer.play()
+
+
+
+              }
+              Row{
+              AppButton{
+                  text: " Next  "
+                  textColor: "black"
+                  backgroundColor: "lightsteelblue"
+                  textSize: 32
+                  width: 150
+                  height: 80
+                  radius: 100
+                  fontBold: true
+
+                  onClicked:{
+                      buttonss.play()
+                      mainPage.navigationStack.push(intermediatePage2)
+                  }
+
+                  x:-120
+                  y:150
+              }
+              AppButton{
+                  text: "MainPage"
+                  textColor: "black"
+                  backgroundColor: "lightsteelblue"
+                  onClicked:{
+                      buttonss.play()
+                      mainPage.navigationStack.push(mainPage)
+                  }
+                  x:80
+                  y:150
+                  textSize: 32
+                  width: 150
+                  height: 80
+                  radius: 100
+                  fontBold: true
+              }
+              AppButton{
+                  text: "Exit"
+                  textColor: "black"
+                  backgroundColor: "lightsteelblue"
+                  onClicked:{
+                      byebye.play()
+                      Qt.quit()
+                  }
+                  textSize: 32
+                  width: 150
+                  height: 80
+                  radius: 100
+                  fontBold: true
+                  x:250
+                  y:150
+
+
+              }
+              }
+            }
+          }
+        }
         }
 
 
-      }
-}
+        Component {
+          id: intermediatePage2
+          Page {
+            title: "Intermediate Level"
+            BackgroundImage{
+                anchors.fill: parent
+                source: "../pages.jpg"
+
+            AppText{
+                text: "Choose The Correct Letter To Complete The Word"
+                fontSize: 35
+                topPadding:15
+                x:200
+                color: "white"
+
+            }
+            AppText{
+                text: " م     د      ر    _    ة"
+                fontSize: 40
+                x:parent.width /2
+                y:300
+                color: "black"
+            }
+
+            AppText{
+                id: scoreID2
+                color: "black"
+                font.pixelSize: 25
+                font.bold: true
+                text: "Score: 1"
+                x: parent.width/7
+                y: 300
+            }
+
+            Row {
+              anchors.centerIn: parent
+              AppButton {
+                text: "س"
+                textColor: "black"
+                backgroundColor: "lightsteelblue"
+                backgroundColorPressed: "green"
+                textSize: 32
+                width: 150
+                height: 80
+                radius: 100
+                fontBold: true
+                onClicked: {
+
+                    clicksound.play()
+                    scoreID2.text ="Score: 2"
+
+    }
+
+              }
+              AppButton {
+                text: "ط"
+                textColor: "black"
+                backgroundColor: "lightsteelblue"
+                backgroundColorPressed: "red"
+                textSize: 32
+                width: 150
+                height: 80
+                radius: 100
+                fontBold: true
+                onClicked: wronganswer.play()
+
+
+
+
+              }
+              AppButton {
+                text: "ن"
+                textColor: "black"
+                backgroundColor: "lightsteelblue"
+                backgroundColorPressed: "red"
+                textSize: 32
+                width: 150
+                height: 80
+                radius: 100
+                fontBold: true
+                onClicked: wronganswer.play()
+
+
+
+              }
+              AppButton {
+                text: "ر"
+                textColor: "black"
+                backgroundColor: "lightsteelblue"
+                backgroundColorPressed: "red"
+                textSize: 32
+                width: 150
+                height: 80
+                radius: 100
+                fontBold: true
+                onClicked: wronganswer.play()
+
+
+
+              }
+              Row{
+              AppButton{
+                  text: " Next  "
+                  textColor: "black"
+                  backgroundColor: "lightsteelblue"
+                  textSize: 32
+                  width: 150
+                  height: 80
+                  radius: 100
+                  fontBold: true
+
+                  onClicked:{
+                      buttonss.play()
+                      mainPage.navigationStack.push(intermediatePage3)
+                  }
+
+                  x:-120
+                  y:150
+              }
+              AppButton{
+                  text: "MainPage"
+                  textColor: "black"
+                  backgroundColor: "lightsteelblue"
+                  onClicked:{
+                      buttonss.play()
+                      mainPage.navigationStack.push(mainPage)
+                  }
+                  x:80
+                  y:150
+                  textSize: 32
+                  width: 150
+                  height: 80
+                  radius: 100
+                  fontBold: true
+              }
+              AppButton{
+                  text: "Exit"
+                  textColor: "black"
+                  backgroundColor: "lightsteelblue"
+                  onClicked:{
+                      byebye.play()
+                      Qt.quit()
+                  }
+                  textSize: 32
+                  width: 150
+                  height: 80
+                  radius: 100
+                  fontBold: true
+                  x:250
+                  y:150
+
+
+              }
+              }
+            }
+          }
+        }
+        }
+
+        Component {
+          id: intermediatePage3
+          Page {
+            title: "Intermediate Level"
+            BackgroundImage{
+                anchors.fill: parent
+                source: "../pages.jpg"
+
+            AppText{
+                text: "Choose The Correct Letter To Complete The Word"
+                fontSize: 35
+                topPadding:15
+                x:200
+                color: "white"
+
+            }
+            AppText{
+                text: "ك    _     ا    ب"
+                fontSize: 40
+                x:parent.width /2
+                y:300
+                color: "black"
+            }
+
+            AppText{
+                id: scoreID3
+                color: "black"
+                font.pixelSize: 25
+                font.bold: true
+                text: "Score: 2"
+                x: parent.width/7
+                y: 300
+            }
+
+            Row {
+              anchors.centerIn: parent
+              AppButton {
+                text: "ي"
+                textColor: "black"
+                backgroundColor: "lightsteelblue"
+                backgroundColorPressed: "red"
+                textSize: 32
+                width: 150
+                height: 80
+                radius: 100
+                fontBold: true
+                onClicked: wronganswer.play()
+
+
+              }
+              AppButton {
+                text: "ت"
+                textColor: "black"
+                backgroundColor: "lightsteelblue"
+                backgroundColorPressed: "green"
+                textSize: 32
+                width: 150
+                height: 80
+                radius: 100
+                fontBold: true
+                onClicked: {
+
+                    scoreID3.text = "Score: 3"
+                    clicksound.play()
+
+    }
+
+
+              }
+              AppButton {
+                text: "ج"
+                textColor: "black"
+                backgroundColor: "lightsteelblue"
+                backgroundColorPressed: "red"
+                textSize: 32
+                width: 150
+                height: 80
+                radius: 100
+                fontBold: true
+                onClicked: wronganswer.play()
+
+
+
+              }
+              AppButton {
+                text: "ل"
+                textColor: "black"
+                backgroundColor: "lightsteelblue"
+                backgroundColorPressed: "red"
+                textSize: 32
+                width: 150
+                height: 80
+                radius: 100
+                fontBold: true
+                onClicked: wronganswer.play()
+
+
+
+              }
+              Row{
+              AppButton{
+                  text: " Next  "
+                  textColor: "black"
+                  backgroundColor: "lightsteelblue"
+                  textSize: 32
+                  width: 150
+                  height: 80
+                  radius: 100
+                  fontBold: true
+
+                  onClicked:{
+                      buttonss.play()
+                      mainPage.navigationStack.push(intermediatePage4)
+                  }
+
+                  x:-120
+                  y:150
+              }
+              AppButton{
+                  text: "MainPage"
+                  textColor: "black"
+                  backgroundColor: "lightsteelblue"
+                  onClicked:{
+                      buttonss.play()
+                      mainPage.navigationStack.push(mainPage)
+                  }
+                  x:80
+                  y:150
+                  textSize: 32
+                  width: 150
+                  height: 80
+                  radius: 100
+                  fontBold: true
+              }
+              AppButton{
+                  text: "Exit"
+                  textColor: "black"
+                  backgroundColor: "lightsteelblue"
+                  onClicked:{
+                      byebye.play()
+                      Qt.quit()
+                  }
+                  textSize: 32
+                  width: 150
+                  height: 80
+                  radius: 100
+                  fontBold: true
+                  x:250
+                  y:150
+
+
+              }
+              }
+            }
+          }
+        }
+        }
+
+
+
+        Component {
+              id: intermediatePage4
+              Page {
+                title: "Intermediate Level"
+                BackgroundImage{
+                    anchors.fill: parent
+                    source: "../pages.jpg"
+
+                AppText{
+                    text: "Choose The Correct Letter To Complete The Word"
+                    fontSize: 35
+                    topPadding:15
+                    x:200
+                    color: "white"
+
+                }
+                AppText{
+                    text: "ظ    ا    _      ط"
+                    fontSize: 40
+                    x:parent.width /2
+                    y:300
+                    color: "black"
+                }
+
+                AppText{
+                    id: scoreID4
+                    color: "black"
+                    font.pixelSize: 25
+                    font.bold: true
+                    text: "Score: 3"
+                    x: parent.width/7
+                    y: 300
+                }
+
+
+                Row {
+                  anchors.centerIn: parent
+                  AppButton {
+                    text: "ب"
+                    textColor: "black"
+                    backgroundColor: "lightsteelblue"
+                    backgroundColorPressed: "green"
+                    textSize: 32
+                    width: 150
+                    height: 80
+                    radius: 100
+                    fontBold: true
+                    onClicked:{
+                        clicksound.play()
+                        scoreID4.text= "Score: 4"
+                    }
+
+                  }
+                  AppButton {
+                    text: "ت"
+                    textColor: "black"
+                    backgroundColor: "lightsteelblue"
+                    backgroundColorPressed: "red"
+                    textSize: 32
+                    width: 150
+                    height: 80
+                    radius: 100
+                    fontBold: true
+                    onClicked: wronganswer.play()
+
+
+
+
+                  }
+                  AppButton {
+                    text: "أ"
+                    textColor: "black"
+                    backgroundColor: "lightsteelblue"
+                    backgroundColorPressed: "red"
+                    textSize: 32
+                    width: 150
+                    height: 80
+                    radius: 100
+                    fontBold: true
+                    onClicked: wronganswer.play()
+
+
+
+                  }
+                  AppButton {
+                    text: "ذ"
+                    textColor: "black"
+                    backgroundColor: "lightsteelblue"
+                    backgroundColorPressed: "red"
+                    textSize: 32
+                    width: 150
+                    height: 80
+                    radius: 100
+                    fontBold: true
+                    onClicked: wronganswer.play()
+
+
+
+                  }
+                  Row{
+                  AppButton{
+                      text: " Next  "
+                      textColor: "black"
+                      backgroundColor: "lightsteelblue"
+                      textSize: 32
+                      width: 150
+                      height: 80
+                      radius: 100
+                      fontBold: true
+
+                      onClicked:{
+                          buttonss.play()
+                          mainPage.navigationStack.push(intermediatePage5)
+                      }
+
+                      x:-120
+                      y:150
+                  }
+                  AppButton{
+                      text: "MainPage"
+                      textColor: "black"
+                      backgroundColor: "lightsteelblue"
+                      onClicked:{
+                          buttonss.play()
+                          mainPage.navigationStack.push(mainPage)
+                      }
+                      x:80
+                      y:150
+                      textSize: 32
+                      width: 150
+                      height: 80
+                      radius: 100
+                      fontBold: true
+                  }
+                  AppButton{
+                      text: "Exit"
+                      textColor: "black"
+                      backgroundColor: "lightsteelblue"
+                      onClicked:{
+                          byebye.play()
+                          Qt.quit()
+                      }
+                      textSize: 32
+                      width: 150
+                      height: 80
+                      radius: 100
+                      fontBold: true
+                      x:250
+                      y:150
+
+
+                  }
+                  }
+                }
+              }
+            }
+            }
+
+
+
+            Component {
+              id: intermediatePage5
+              Page {
+                title: "Intermediate Level"
+                BackgroundImage{
+                    anchors.fill: parent
+                    source: "../pages.jpg"
+
+                AppText{
+                    text: "Choose The Correct Letter To Complete The Word"
+                    fontSize: 35
+                    topPadding:15
+                    x:200
+                    color: "white"
+
+                }
+                AppText{
+                    text: "ح    م     ا     _ "
+                    fontSize: 40
+                    x:parent.width /2
+                    y:300
+                    color: "black"
+                }
+
+                AppText{
+                    id: scoreID5
+                    color: "black"
+                    font.pixelSize: 25
+                    font.bold: true
+                    text: "Score: 4"
+                    x: parent.width/7
+                    y: 300
+                }
+                Row {
+                  anchors.centerIn: parent
+                  AppButton {
+                    text: "ئ"
+                    textColor: "black"
+                    backgroundColor: "lightsteelblue"
+                    backgroundColorPressed: "red"
+                    textSize: 32
+                    width: 150
+                    height: 80
+                    radius: 100
+                    fontBold: true
+                    onClicked: wronganswer.play()
+
+
+                  }
+                  AppButton {
+                    text: "و"
+                    textColor: "black"
+                    backgroundColor: "lightsteelblue"
+                    backgroundColorPressed: "red"
+                    textSize: 32
+                    width: 150
+                    height: 80
+                    radius: 100
+                    fontBold: true
+                    onClicked: wronganswer.play()
+
+
+
+
+                  }
+                  AppButton {
+                    text: "غ"
+                    textColor: "black"
+                    backgroundColor: "lightsteelblue"
+                    backgroundColorPressed: "red"
+                    textSize: 32
+                    width: 150
+                    height: 80
+                    radius: 100
+                    fontBold: true
+                    onClicked: wronganswer.play()
+
+
+
+                  }
+                  AppButton {
+                    text: "ر"
+                    textColor: "black"
+                    backgroundColor: "lightsteelblue"
+                    backgroundColorPressed: "green"
+                    textSize: 32
+                    width: 150
+                    height: 80
+                    radius: 100
+                    fontBold: true
+                    onClicked:{
+                        clicksound.play()
+                        scoreID5.text="Score: 5"
+                    }
+
+                  }
+                  Row{
+                  AppButton{
+                      text: " Next  "
+                      textColor: "black"
+                      backgroundColor: "lightsteelblue"
+                      textSize: 32
+                      width: 150
+                      height: 80
+                      radius: 100
+                      fontBold: true
+
+                      onClicked:{
+                          buttonss.play()
+                          mainPage.navigationStack.push(intermediatePage6)
+                      }
+
+                      x:-120
+                      y:150
+                  }
+                  AppButton{
+                      text: "MainPage"
+                      textColor: "black"
+                      backgroundColor: "lightsteelblue"
+                      onClicked:{
+                          buttonss.play()
+                          mainPage.navigationStack.push(mainPage)
+                      }
+                      x:80
+                      y:150
+                      textSize: 32
+                      width: 150
+                      height: 80
+                      radius: 100
+                      fontBold: true
+                  }
+                  AppButton{
+                      text: "Exit"
+                      textColor: "black"
+                      backgroundColor: "lightsteelblue"
+                      onClicked:{
+                          byebye.play()
+                          Qt.quit()
+                      }
+                      textSize: 32
+                      width: 150
+                      height: 80
+                      radius: 100
+                      fontBold: true
+                      x:250
+                      y:150
+
+
+                  }
+                  }
+                }
+              }
+            }
+            }
+
+
+
+            Component {
+              id: intermediatePage6
+              Page {
+                title: "Intermediate Level"
+                BackgroundImage{
+                    anchors.fill: parent
+                    source: "../pages.jpg"
+
+                AppText{
+                    text: "Choose The Correct Letter To Complete The Word"
+                    fontSize: 35
+                    topPadding:15
+                    x:200
+                    color: "white"
+
+                }
+                AppText{
+                    text: "_     ر      ن     ب  "
+                    fontSize: 40
+                    x:parent.width /2
+                    y:300
+                    color: "black"
+                }
+
+                AppText{
+                    id: scoreID6
+                    color: "black"
+                    font.pixelSize: 25
+                    font.bold: true
+                    text: "Score: 5"
+                    x: parent.width/7
+                    y: 300
+                }
+                Row {
+                  anchors.centerIn: parent
+                  AppButton {
+                    text: "أ"
+                    textColor: "black"
+                    backgroundColor: "lightsteelblue"
+                    backgroundColorPressed: "green"
+                    textSize: 32
+                    width: 150
+                    height: 80
+                    radius: 100
+                    fontBold: true
+                    onClicked:{
+                     scoreID6.text= "Score: 6"
+                        clicksound.play()
+                    }
+
+                  }
+                  AppButton {
+                    text: "ت"
+                    textColor: "black"
+                    backgroundColor: "lightsteelblue"
+                    backgroundColorPressed: "red"
+                    textSize: 32
+                    width: 150
+                    height: 80
+                    radius: 100
+                    fontBold: true
+                    onClicked: wronganswer.play()
+
+
+
+
+                  }
+                  AppButton {
+                    text: "ب"
+                    textColor: "black"
+                    backgroundColor: "lightsteelblue"
+                    backgroundColorPressed: "red"
+                    textSize: 32
+                    width: 150
+                    height: 80
+                    radius: 100
+                    fontBold: true
+                    onClicked: wronganswer.play()
+
+
+
+                  }
+                  AppButton {
+                    text: "ذ"
+                    textColor: "black"
+                    backgroundColor: "lightsteelblue"
+                    backgroundColorPressed: "red"
+                    textSize: 32
+                    width: 150
+                    height: 80
+                    radius: 100
+                    fontBold: true
+                    onClicked: wronganswer.play()
+
+
+
+                  }
+                  Row{
+                  AppButton{
+                      text: " Next  "
+                      textColor: "black"
+                      backgroundColor: "lightsteelblue"
+                      textSize: 32
+                      width: 150
+                      height: 80
+                      radius: 100
+                      fontBold: true
+
+                      onClicked:{
+                          buttonss.play()
+                          mainPage.navigationStack.push(intermediatePage7)
+                      }
+
+                      x:-120
+                      y:150
+                  }
+                  AppButton{
+                      text: "MainPage"
+                      textColor: "black"
+                      backgroundColor: "lightsteelblue"
+                      onClicked:{
+                          buttonss.play()
+                          mainPage.navigationStack.push(mainPage)
+                      }
+                      x:80
+                      y:150
+                      textSize: 32
+                      width: 150
+                      height: 80
+                      radius: 100
+                      fontBold: true
+                  }
+                  AppButton{
+                      text: "Exit"
+                      textColor: "black"
+                      backgroundColor: "lightsteelblue"
+                      onClicked:{
+                          byebye.play()
+                          Qt.quit()
+                      }
+                      textSize: 32
+                      width: 150
+                      height: 80
+                      radius: 100
+                      fontBold: true
+                      x:250
+                      y:150
+
+
+                  }
+                  }
+                }
+              }
+            }
+            }
+
+            Component {
+                 id: intermediatePage7
+                 Page {
+                   title: "Intermediate Level"
+                   BackgroundImage{
+                       anchors.fill: parent
+                       source: "../pages.jpg"
+
+                   AppText{
+                       text: "Choose The Correct Letter To Complete The Word"
+                       fontSize: 35
+                       topPadding:15
+                       x:200
+                       color: "white"
+
+                   }
+                   AppText{
+                       text: "-   ع     ل     ب"
+                       fontSize: 40
+                       x:parent.width /2
+                       y:300
+                       color: "black"
+                   }
+
+                   AppText{
+                       id: scoreID7
+                       color: "black"
+                       font.pixelSize: 25
+                       font.bold: true
+                       text: "Score: 6"
+                       x: parent.width/7
+                       y: 300
+                   }
+                   Row {
+                     anchors.centerIn: parent
+                     AppButton {
+                       text: "ن"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "red"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked: wronganswer.play()
+
+
+                     }
+                     AppButton {
+                       text: "ر"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "red"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked: wronganswer.play()
+
+
+
+
+                     }
+                     AppButton {
+                       text: "ث"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "green"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked: {
+                        scoreID7.text= "Score: 7"
+                           clicksound.play()
+                       }
+
+
+                     }
+                     AppButton {
+                       text: "ط"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "red"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked: wronganswer.play()
+
+
+
+                     }
+                     Row{
+                     AppButton{
+                         text: " Next  "
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         textSize: 32
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
+
+                         onClicked:{
+                             buttonss.play()
+                             mainPage.navigationStack.push(intermediatePage8)
+                         }
+
+                         x:-120
+                         y:150
+                     }
+                     AppButton{
+                         text: "MainPage"
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         onClicked:{
+                             buttonss.play()
+                             mainPage.navigationStack.push(mainPage)
+                         }
+                         x:80
+                         y:150
+                         textSize: 32
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
+                     }
+                     AppButton{
+                         text: "Exit"
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         onClicked:{
+                             byebye.play()
+                             Qt.quit()
+                         }
+                         textSize: 32
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
+                         x:250
+                         y:150
+
+
+                     }
+                     }
+                   }
+                 }
+               }
+               }
+
+               Component {
+                 id: intermediatePage8
+                 Page {
+                   title: "Intermediate Level"
+                   BackgroundImage{
+                       anchors.fill: parent
+                       source: "../pages.jpg"
+
+                   AppText{
+                       text: "Choose The Correct Letter To Complete The Word"
+                       fontSize: 35
+                       topPadding:15
+                       x:200
+                       color: "white"
+
+                   }
+                   AppText{
+                       text: "ص      -      ر     ة"
+                       fontSize: 40
+                       x:parent.width /2
+                       y:300
+                       color: "black"
+                   }
+                   AppText{
+                       id: scoreID8
+                       color: "black"
+                       font.pixelSize: 25
+                       font.bold: true
+                       text: "Score: 7"
+                       x: parent.width/7
+                       y: 300
+                   }
+
+                   Row {
+                     anchors.centerIn: parent
+                     AppButton {
+                       text: "د"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "red"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked: wronganswer.play()
+
+
+                     }
+                     AppButton {
+                       text: "ف"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "red"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked: wronganswer.play()
+
+
+
+
+                     }
+                     AppButton {
+                       text: "خ"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "green"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked:{
+                        scoreID8.text = "Score: 8"
+                           clicksound.play()
+                       }
+
+
+                     }
+                     AppButton {
+                       text: "ش"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "red"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked: wronganswer.play()
+
+
+
+                     }
+                     Row{
+                     AppButton{
+                         text: " Next  "
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         textSize: 32
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
+
+                         onClicked:{
+                             buttonss.play()
+                             mainPage.navigationStack.push(intermediatePage9)
+                         }
+
+                         x:-120
+                         y:150
+                     }
+                     AppButton{
+                         text: "MainPage"
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         onClicked:{
+                             buttonss.play()
+                             mainPage.navigationStack.push(mainPage)
+                         }
+                         x:80
+                         y:150
+                         textSize: 32
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
+                     }
+                     AppButton{
+                         text: "Exit"
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         onClicked:{
+                             byebye.play()
+                             Qt.quit()
+                         }
+                         textSize: 32
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
+                         x:250
+                         y:150
+
+
+                     }
+                     }
+                   }
+                 }
+               }
+               }
+
+
+               Component {
+                 id: intermediatePage9
+                 Page {
+                   title: "Intermediate Level"
+                   BackgroundImage{
+                       anchors.fill: parent
+                       source: "../pages.jpg"
+
+                   AppText{
+                       text: "Choose The Correct Letter To Complete The Word"
+                       fontSize: 35
+                       topPadding:15
+                       x:200
+                       color: "white"
+
+                   }
+                   AppText{
+                       text: "م     ت     ح    _ "
+                       fontSize: 40
+                       x:parent.width /2
+                       y:300
+                       color: "black"
+                   }
+                   AppText{
+                       id: scoreID9
+                       color: "black"
+                       font.pixelSize: 25
+                       font.bold: true
+                       text: "Score: 8"
+                       x: parent.width/7
+                       y: 300
+                   }
+
+
+                   Row {
+                     anchors.centerIn: parent
+                     AppButton {
+                       text: "ه"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "red"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked: wronganswer.play()
+
+
+                     }
+                     AppButton {
+                       text: "ف"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "green"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked:{
+                           scoreID9.text = "Score: 9"
+                           clicksound.play()
+                       }
+
+
+
+                     }
+                     AppButton {
+                       text: "خ"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "red"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked: wronganswer.play()
+
+
+
+                     }
+                     AppButton {
+                       text: "ذ"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "red"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked: wronganswer.play()
+
+
+
+                     }
+                     Row{
+                     AppButton{
+                         text: " Next  "
+
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         textSize: 32
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
+
+                         onClicked:{
+                             buttonss.play()
+                             mainPage.navigationStack.push(intermediatePage10)
+                         }
+
+                         x:-120
+                         y:150
+                     }
+                     AppButton{
+                         text: "MainPage"
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         onClicked:{
+                             buttonss.play()
+                             mainPage.navigationStack.push(mainPage)
+                         }
+                         x:80
+                         y:150
+                         textSize: 32
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
+                     }
+                     AppButton{
+                         text: "Exit"
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         onClicked:{
+                             byebye.play()
+                             Qt.quit()
+                         }
+                         textSize: 32
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
+                         x:250
+                         y:150
+
+
+                     }
+                     }
+                   }
+                 }
+               }
+               }
+
+
+               Component {
+                 id: intermediatePage10
+                 Page {
+                   title: "Intermediate Level"
+                   BackgroundImage{
+                       anchors.fill: parent
+                       source: "../pages.jpg"
+
+                   AppText{
+                       text: "Choose The Correct Letter To Complete The Word"
+                       fontSize: 35
+                       topPadding:15
+                       x:200
+                       color: "white"
+
+                   }
+                   AppText{
+                       text: "-    ا      ف       ل      ة"
+                       fontSize: 40
+                       x:parent.width /2
+                       y:300
+                       color: "black"
+                   }
+
+                   AppText{
+                       id: scoreID10
+                       color: "black"
+                       font.pixelSize: 25
+                       font.bold: true
+                       text: "Score: 9"
+                       x: parent.width/7
+                       y: 300
+                   }
+                   Row {
+                     anchors.centerIn: parent
+                     AppButton {
+                       text: "ث"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "red"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked: wronganswer.play()
+
+
+                     }
+                     AppButton {
+                       text: "م"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "red"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked: wronganswer.play()
+
+
+
+
+                     }
+                     AppButton {
+                       text: "ق"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "green"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked:{
+                           scoreID10.text= "Score: 10"
+                           clicksound.play()
+
+           }
+
+                     }
+                     AppButton {
+                       text: "ك"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "red"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked: wronganswer.play()
+
+
+
+                     }
+                     Row{
+                     AppButton{
+                         text: " Next  "
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         textSize: 32
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
+
+                         onClicked:{
+                             buttonss.play()
+                             mainPage.navigationStack.push(intermediatePage11)
+                         }
+
+                         x:-120
+                         y:150
+                     }
+                     AppButton{
+                         text: "MainPage"
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         onClicked:{
+                             buttonss.play()
+                             mainPage.navigationStack.push(mainPage)
+                         }
+                         x:80
+                         y:150
+                         textSize: 32
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
+                     }
+                     AppButton{
+                         text: "Exit"
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         onClicked:{
+                             byebye.play()
+                             Qt.quit()
+                         }
+                         textSize: 32
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
+                         x:250
+                         y:150
+
+
+                     }
+                     }
+                   }
+                 }
+               }
+               }
+
+
+
+               Component {
+                 id: intermediatePage11
+                 Page {
+                   title: "Intermediate Level"
+                   BackgroundImage{
+                       anchors.fill: parent
+                       source: "../pages.jpg"
+
+                   AppText{
+                       text: "Choose The Correct Letter To Complete The Word"
+                       fontSize: 35
+                       topPadding:15
+                       x:200
+                       color: "white"
+
+                   }
+                   AppText{
+                       text: "_     ج     ر      ة"
+                       fontSize: 40
+                       x:parent.width /2
+                       y:300
+                       color: "black"
+                   }
+
+                   AppText{
+                       id: scoreID11
+                       color: "black"
+                       font.pixelSize: 25
+                       font.bold: true
+                       text: "Score: 10"
+                       x: parent.width/7
+                       y: 300
+                   }
+
+                   Row {
+                     anchors.centerIn: parent
+                     AppButton {
+                       text: "ش"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "green"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked:{
+                           clicksound.play()
+                       scoreID11.text= "Score: 11"
+           }
+                     }
+                     AppButton {
+                       text: "ل"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "red"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked: wronganswer.play()
+
+
+
+
+                     }
+                     AppButton {
+                       text: "ه"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "red"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked: wronganswer.play()
+
+
+
+                     }
+                     AppButton {
+                       text: "ي"
+                       textColor: "black"
+                       backgroundColor: "lightsteelblue"
+                       backgroundColorPressed: "red"
+                       textSize: 32
+                       width: 150
+                       height: 80
+                       radius: 100
+                       fontBold: true
+                       onClicked: wronganswer.play()
+
+
+
+                     }
+                     Row{
+                     AppButton{
+                         text: " Next  "
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         textSize: 32
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
+
+                         onClicked:{
+                             buttonss.play()
+                             mainPage.navigationStack.push(intermediatePage12)
+                         }
+
+                         x:-120
+                         y:150
+                     }
+                     AppButton{
+                         text: "MainPage"
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         onClicked:{
+                             buttonss.play()
+                             mainPage.navigationStack.push(mainPage)
+                         }
+                         x:80
+                         y:150
+                         textSize: 32
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
+                     }
+                     AppButton{
+                         text: "Exit"
+                         textColor: "black"
+                         backgroundColor: "lightsteelblue"
+                         onClicked:{
+                             byebye.play()
+                             Qt.quit()
+                         }
+                         textSize: 32
+                         width: 150
+                         height: 80
+                         radius: 100
+                         fontBold: true
+                         x:250
+                         y:150
+
+
+                     }
+                     }
+                   }
+                 }
+               }
+               }
+
+
+               Component {
+                     id: intermediatePage12
+                     Page {
+                       title: "Intermediate Level"
+                       BackgroundImage{
+                           anchors.fill: parent
+                           source: "../pages.jpg"
+
+                       AppText{
+                           text: "Choose The Correct Letter To Complete The Word"
+                           fontSize: 35
+                           topPadding:15
+                           x:200
+                           color: "white"
+
+                       }
+                       AppText{
+                           text: "-      ب       و       ب"
+                           fontSize: 40
+                           x:parent.width /2
+                           y:300
+                           color: "black"
+                       }
+
+                       AppText{
+                           id: scoreID12
+                           color: "black"
+                           font.pixelSize: 25
+                           font.bold: true
+                           text: "Score: 11"
+                           x: parent.width/7
+                           y: 300
+                       }
+
+                       Row {
+                         anchors.centerIn: parent
+                         AppButton {
+                           text: "ب"
+                           textColor: "black"
+                           backgroundColor: "lightsteelblue"
+                           backgroundColorPressed: "red"
+                           textSize: 32
+                           width: 150
+                           height: 80
+                           radius: 100
+                           fontBold: true
+                           onClicked: wronganswer.play()
+
+
+                         }
+                         AppButton {
+                           text: "ح"
+                           textColor: "black"
+                           backgroundColor: "lightsteelblue"
+                           backgroundColorPressed: "green"
+                           textSize: 32
+                           width: 150
+                           height: 80
+                           radius: 100
+                           fontBold: true
+                           onClicked: {
+                               scoreID12.text="Score: 12"
+                               clicksound.play()
+
+
+
+               }
+                         }
+                         AppButton {
+                           text: "ث"
+                           textColor: "black"
+                           backgroundColor: "lightsteelblue"
+                           backgroundColorPressed: "red"
+                           textSize: 32
+                           width: 150
+                           height: 80
+                           radius: 100
+                           fontBold: true
+                           onClicked: wronganswer.play()
+
+
+
+                         }
+                         AppButton {
+                           text: "ج"
+                           textColor: "black"
+                           backgroundColor: "lightsteelblue"
+                           backgroundColorPressed: "red"
+                           textSize: 32
+                           width: 150
+                           height: 80
+                           radius: 100
+                           fontBold: true
+                           onClicked: wronganswer.play()
+
+
+
+                         }
+                         Row{
+                         AppButton{
+                             text: " Next  "
+                             textColor: "black"
+                             backgroundColor: "lightsteelblue"
+                             textSize: 32
+                             width: 150
+                             height: 80
+                             radius: 100
+                             fontBold: true
+
+                             onClicked:{
+                                 buttonss.play()
+                                 mainPage.navigationStack.push(intermediatePage13)
+                             }
+
+                             x:-120
+                             y:150
+                         }
+                         AppButton{
+                             text: "MainPage"
+                             textColor: "black"
+                             backgroundColor: "lightsteelblue"
+                             onClicked:{
+                                 buttonss.play()
+                                 mainPage.navigationStack.push(mainPage)
+                             }
+                             x:80
+                             y:150
+                             textSize: 32
+                             width: 150
+                             height: 80
+                             radius: 100
+                             fontBold: true
+                         }
+                         AppButton{
+                             text: "Exit"
+                             textColor: "black"
+                             backgroundColor: "lightsteelblue"
+                             onClicked:{
+                                 byebye.play()
+                                 Qt.quit()
+                             }
+                             textSize: 32
+                             width: 150
+                             height: 80
+                             radius: 100
+                             fontBold: true
+                             x:250
+                             y:150
+
+
+                         }
+                         }
+                       }
+                     }
+                   }
+                   }
+
+
+
+
+                   Component {
+                     id: intermediatePage13
+                     Page {
+                       title: "Intermediate Level"
+                       BackgroundImage{
+                           anchors.fill: parent
+                           source: "../pages.jpg"
+
+                       AppText{
+                           text: "Choose The Correct Letter To Complete The Word"
+                           fontSize: 35
+                           topPadding:15
+                           x:200
+                           color: "white"
+
+                       }
+                       AppText{
+                           text: "م     ر      -      ب"
+                           fontSize: 40
+                           x:parent.width /2
+                           y:300
+                           color: "black"
+                       }
+
+                       AppText{
+                           id: scoreID13
+                           color: "black"
+                           font.pixelSize: 25
+                           font.bold: true
+                           text: "Score: 12"
+                           x: parent.width/7
+                           y: 300
+                       }
+                       Row {
+                         anchors.centerIn: parent
+                         AppButton {
+                           text: "ك"
+                           textColor: "black"
+                           backgroundColor: "lightsteelblue"
+                           backgroundColorPressed: "green"
+                           textSize: 32
+                           width: 150
+                           height: 80
+                           radius: 100
+                           fontBold: true
+                           onClicked:{
+                               scoreID13.text="Score: 13"
+                               clicksound.play()
+
+               }
+                         }
+                         AppButton {
+                           text: "ف"
+                           textColor: "black"
+                           backgroundColor: "lightsteelblue"
+                           backgroundColorPressed: "red"
+                           textSize: 32
+                           width: 150
+                           height: 80
+                           radius: 100
+                           fontBold: true
+                           onClicked: wronganswer.play()
+
+
+
+
+                         }
+                         AppButton {
+                           text: "أ"
+                           textColor: "black"
+                           backgroundColor: "lightsteelblue"
+                           backgroundColorPressed: "red"
+                           textSize: 32
+                           width: 150
+                           height: 80
+                           radius: 100
+                           fontBold: true
+                           onClicked: wronganswer.play()
+
+
+
+                         }
+                         AppButton {
+                           text: "س"
+                           textColor: "black"
+                           backgroundColor: "lightsteelblue"
+                           backgroundColorPressed: "red"
+                           textSize: 32
+                           width: 150
+                           height: 80
+                           radius: 100
+                           fontBold: true
+                           onClicked: wronganswer.play()
+
+
+
+                         }
+                         Row{
+                         AppButton{
+                             text: " Next  "
+                             textColor: "black"
+                             backgroundColor: "lightsteelblue"
+                             textSize: 32
+                             width: 150
+                             height: 80
+                             radius: 100
+                             fontBold: true
+
+                             onClicked:{
+                                 buttonss.play()
+                                 mainPage.navigationStack.push(intermediatePage14)
+                             }
+
+                             x:-120
+                             y:150
+                         }
+                         AppButton{
+                             text: "MainPage"
+                             textColor: "black"
+                             backgroundColor: "lightsteelblue"
+                             onClicked:{
+                                 buttonss.play()
+                                 mainPage.navigationStack.push(mainPage)
+                             }
+                             x:80
+                             y:150
+                             textSize: 32
+                             width: 150
+                             height: 80
+                             radius: 100
+                             fontBold: true
+                         }
+                         AppButton{
+                             text: "Exit"
+                             textColor: "black"
+                             backgroundColor: "lightsteelblue"
+                             onClicked:{
+                                 byebye.play()
+                                 Qt.quit()
+                             }
+                             textSize: 32
+                             width: 150
+                             height: 80
+                             radius: 100
+                             fontBold: true
+                             x:250
+                             y:150
+
+
+                         }
+                         }
+                       }
+                     }
+                   }
+                   }
+
+
+                   Component {
+                         id: intermediatePage14
+                         Page {
+                           title: "Intermediate Level"
+                           BackgroundImage{
+                               anchors.fill: parent
+                               source: "../pages.jpg"
+
+                           AppText{
+                               text: "Choose The Correct Letter To Complete The Word"
+                               fontSize: 35
+                               topPadding:15
+                               x:200
+                               color: "white"
+
+                           }
+                           AppText{
+                               text: "_      ا       ل      ب"
+                               fontSize: 40
+                               x:parent.width /2
+                               y:300
+                               color: "black"
+                           }
+                           AppText{
+                               id: scoreID14
+                               color: "black"
+                               font.pixelSize: 25
+                               font.bold: true
+                               text: "Score: 13"
+                               x: parent.width/7
+                               y: 300
+                           }
+
+
+                           Row {
+                             anchors.centerIn: parent
+                             AppButton {
+                               text: "ظ"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+                             }
+                             AppButton {
+                               text: "ش"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+
+                             }
+                             AppButton {
+                               text: "ح"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             AppButton {
+                               text: "ط"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "green"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked:{
+                                   scoreID14.text= "Score: 14"
+                                   clicksound.play()
+
+                   }
+
+                             }
+                             Row{
+                             AppButton{
+                                 text: " Next  "
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(intermediatePage15)
+                                 }
+
+                                 x:-120
+                                 y:150
+                             }
+                             AppButton{
+                                 text: "MainPage"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(mainPage)
+                                 }
+                                 x:80
+                                 y:150
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                             }
+                             AppButton{
+                                 text: "Exit"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     byebye.play()
+                                     Qt.quit()
+                                 }
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                                 x:250
+                                 y:150
+
+
+                             }
+                             }
+                           }
+                         }
+                       }
+                       }
+
+
+
+                       Component {
+                         id: intermediatePage15
+                         Page {
+                           title: "Intermediate Level"
+                           BackgroundImage{
+                               anchors.fill: parent
+                               source: "../pages.jpg"
+
+                           AppText{
+                               text: "Choose The Correct Letter To Complete The Word"
+                               fontSize: 35
+                               topPadding:15
+                               x:200
+                               color: "white"
+
+                           }
+                           AppText{
+                               text: "-     ي       ن        ة "
+                               fontSize: 40
+                               x:parent.width /2
+                               y:300
+                               color: "black"
+                           }
+                           AppText{
+                               id: scoreID15
+                               color: "black"
+                               font.pixelSize: 25
+                               font.bold: true
+                               text: "Score: 14"
+                               x: parent.width/7
+                               y: 300
+                           }
+
+                           Row {
+                             anchors.centerIn: parent
+                             AppButton {
+                               text: "ك"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+                             }
+                             AppButton {
+                               text: "ت"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+
+                             }
+                             AppButton {
+                               text: "ز"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "green"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked:{
+                                   scoreID15.text="Score: 15"
+                                   clicksound.play()
+                   }
+
+
+                             }
+                             AppButton {
+                               text: "ذ"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             Row{
+                             AppButton{
+                                 text: " Next  "
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(intermediatePage16)
+                                 }
+
+                                 x:-120
+                                 y:150
+                             }
+                             AppButton{
+                                 text: "MainPage"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(mainPage)
+                                 }
+                                 x:80
+                                 y:150
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                             }
+                             AppButton{
+                                 text: "Exit"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     byebye.play()
+                                     Qt.quit()
+                                 }
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                                 x:250
+                                 y:150
+
+
+                             }
+                             }
+                           }
+                         }
+                       }
+                       }
+
+
+
+                       Component {
+                         id: intermediatePage16
+                         Page {
+                           title: "Intermediate Level"
+                           BackgroundImage{
+                               anchors.fill: parent
+                               source: "../pages.jpg"
+
+                           AppText{
+                               text: "Choose The Correct Letter To Complete The Word"
+                               fontSize: 35
+                               topPadding:15
+                               x:200
+                               color: "white"
+
+                           }
+                           AppText{
+                               text: "ن    ا     ف    _     ة"
+                               fontSize: 40
+                               x:parent.width /2
+                               y:300
+                               color: "black"
+                           }
+
+                           AppText{
+                               id: scoreID16
+                               color: "black"
+                               font.pixelSize: 25
+                               font.bold: true
+                               text: "Score: 15"
+                               x: parent.width/7
+                               y: 300
+                           }
+
+                           Row {
+                             anchors.centerIn: parent
+                             AppButton {
+                               text: "ذ"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "green"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: {
+                                   scoreID16.text = "Score: 16"
+                                   clicksound.play()
+                   }
+
+                             }
+                             AppButton {
+                               text: "د"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+
+                             }
+                             AppButton {
+                               text: "أ"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             AppButton {
+                               text: "ل"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             Row{
+                             AppButton{
+                                 text: " Next  "
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(intermediatePage17)
+                                 }
+
+                                 x:-120
+                                 y:150
+                             }
+                             AppButton{
+                                 text: "MainPage"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(mainPage)
+                                 }
+                                 x:80
+                                 y:150
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                             }
+                             AppButton{
+                                 text: "Exit"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     byebye.play()
+                                     Qt.quit()
+                                 }
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                                 x:250
+                                 y:150
+
+
+                             }
+                             }
+                           }
+                         }
+                       }
+                       }
+
+
+
+
+
+
+                       Component {
+                         id: intermediatePage17
+                         Page {
+                           title: "Intermediate Level"
+                           BackgroundImage{
+                               anchors.fill: parent
+                               source: "../pages.jpg"
+
+                           AppText{
+                               text: "Choose The Correct Letter To Complete The Word"
+                               fontSize: 35
+                               topPadding:15
+                               x:200
+                               color: "white"
+
+                           }
+                           AppText{
+                               text: "م     -      ر      ض"
+                               fontSize: 40
+                               x:parent.width /2
+                               y:300
+                               color: "black"
+                           }
+
+                           AppText{
+                               id: scoreID17
+                               color: "black"
+                               font.pixelSize: 25
+                               font.bold: true
+                               text: "Score: 16"
+                               x: parent.width/7
+                               y: 300
+                           }
+                           Row {
+                             anchors.centerIn: parent
+                             AppButton {
+                               text: "ب"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+                             }
+                             AppButton {
+                               text: "ع"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "green"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked:{
+                                   scoreID17.text = "Score: 17"
+                                   clicksound.play()
+
+
+                   }
+
+                             }
+                             AppButton {
+                               text: "ش"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             AppButton {
+                               text: "غ"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             Row{
+                             AppButton{
+                                 text: " Next  "
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(intermediatePage18)
+                                 }
+
+                                 x:-120
+                                 y:150
+                             }
+                             AppButton{
+                                 text: "MainPage"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(mainPage)
+                                 }
+                                 x:80
+                                 y:150
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                             }
+                             AppButton{
+                                 text: "Exit"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     byebye.play()
+                                     Qt.quit()
+                                 }
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                                 x:250
+                                 y:150
+
+
+                             }
+                             }
+                           }
+                         }
+                       }
+                       }
+
+                       Component {
+                         id: intermediatePage18
+                         Page {
+                           title: "Intermediate Level"
+                           BackgroundImage{
+                               anchors.fill: parent
+                               source: "../pages.jpg"
+
+                           AppText{
+                               text: "Choose The Correct Letter To Complete The Word"
+                               fontSize: 35
+                               topPadding:15
+                               x:200
+                               color: "white"
+
+                           }
+                           AppText{
+                               text: "د      -       ل       ة"
+                               fontSize: 40
+                               x:parent.width /2
+                               y:300
+                               color: "black"
+                           }
+
+                           AppText{
+                               id: scoreID18
+                               color: "black"
+                               font.pixelSize: 25
+                               font.bold: true
+                               text: "Score: 17"
+                               x: parent.width/7
+                               y: 300
+                           }
+                           Row {
+                             anchors.centerIn: parent
+                             AppButton {
+                               text: "ط"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+                             }
+                             AppButton {
+                               text: "و"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "green"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked:{
+                                   scoreID18.text= "Score: 18"
+                                   clicksound.play()
+
+                   }
+
+
+                             }
+                             AppButton {
+                               text: "ح"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             AppButton {
+                               text: "خ"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             Row{
+                             AppButton{
+                                 text: " Next  "
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(intermediatePage19)
+                                 }
+
+                                 x:-120
+                                 y:150
+                             }
+                             AppButton{
+                                 text: "MainPage"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(mainPage)
+                                 }
+                                 x:80
+                                 y:150
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                             }
+                             AppButton{
+                                 text: "Exit"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     byebye.play()
+                                     Qt.quit()
+                                 }
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                                 x:250
+                                 y:150
+
+
+                             }
+                             }
+                           }
+                         }
+                       }
+                       }
+                       Component {
+                         id: intermediatePage19
+                         Page {
+                           title: "Intermediate Level"
+                           BackgroundImage{
+                               anchors.fill: parent
+                               source: "../pages.jpg"
+
+                           AppText{
+                               text: "Choose The Correct Letter To Complete The Word"
+                               fontSize: 35
+                               topPadding:15
+                               x:200
+                               color: "white"
+
+                           }
+                           AppText{
+                               text: "-     ه      ا     ء"
+                               fontSize: 40
+                               x:parent.width /2
+                               y:300
+                               color: "black"
+                           }
+
+                           AppText{
+                               id: scoreID19
+                               color: "black"
+                               font.pixelSize: 25
+                               font.bold: true
+                               text: "Score: 18"
+                               x: parent.width/7
+                               y: 300
+                           }
+                           Row {
+                             anchors.centerIn: parent
+                             AppButton {
+                               text: "د"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "green"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked:{
+                                   scoreID19.text="Score: 19"
+                                   clicksound.play()
+                   }
+
+                             }
+                             AppButton {
+                               text: "ج"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+
+                             }
+                             AppButton {
+                               text: "ح"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             AppButton {
+                               text: "خ"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             Row{
+                             AppButton{
+                                 text: " Next  "
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(intermediatePage20)
+                                 }
+
+                                 x:-120
+                                 y:150
+                             }
+                             AppButton{
+                                 text: "MainPage"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(mainPage)
+                                 }
+                                 x:80
+                                 y:150
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                             }
+                             AppButton{
+                                 text: "Exit"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     byebye.play()
+                                     Qt.quit()
+                                 }
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                                 x:250
+                                 y:150
+
+
+                             }
+                             }
+                           }
+                         }
+                       }
+                       }
+
+                       Component {
+                         id: intermediatePage20
+                         Page {
+                           title: "Intermediate Level"
+                           BackgroundImage{
+                               anchors.fill: parent
+                               source: "../pages.jpg"
+
+                           AppText{
+                               text: "Choose The Correct Letter To Complete The Word"
+                               fontSize: 35
+                               topPadding:15
+                               x:200
+                               color: "white"
+
+                           }
+                           AppText{
+                               text: "-     ل      م      ة"
+                               fontSize: 40
+                               x:parent.width /2
+                               y:300
+                               color: "black"
+                           }
+
+                           AppText{
+                               id: scoreID20
+                               color: "black"
+                               font.pixelSize: 25
+                               font.bold: true
+                               text: "Score: 19"
+                               x: parent.width/7
+                               y: 300
+                           }
+                           Row {
+                             anchors.centerIn: parent
+                             AppButton {
+                               text: "ط"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+                             }
+                             AppButton {
+                               text: "ظ"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "green"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: {
+                                   scoreID20.text="Score: 20"
+                                   clicksound.play()
+
+                   }
+
+
+                             }
+                             AppButton {
+                               text: "ص"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             AppButton {
+                               text: "ض"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             Row{
+                             AppButton{
+                                 text: " Next  "
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(intermediatePage21)
+                                 }
+
+                                 x:-120
+                                 y:150
+                             }
+                             AppButton{
+                                 text: "MainPage"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(mainPage)
+                                 }
+                                 x:80
+                                 y:150
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                             }
+                             AppButton{
+                                 text: "Exit"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     byebye.play()
+                                     Qt.quit()
+                                 }
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                                 x:250
+                                 y:150
+
+
+                             }
+                             }
+                           }
+                         }
+                       }
+                       }
+
+
+                       Component {
+                         id: intermediatePage21
+                         Page {
+                           title: "Intermediate Level"
+                           BackgroundImage{
+                               anchors.fill: parent
+                               source: "../pages.jpg"
+
+                           AppText{
+                               text: "Choose The Correct Letter To Complete The Word"
+                               fontSize: 35
+                               topPadding:15
+                               x:200
+                               color: "white"
+
+                           }
+                           AppText{
+                               text: "ص        -         ي       ر"
+                               fontSize: 40
+                               x:parent.width /2
+                               y:300
+                               color: "black"
+                           }
+
+                           AppText{
+                               id: scoreID21
+                               color: "black"
+                               font.pixelSize: 25
+                               font.bold: true
+                               text: "Score: 20"
+                               x: parent.width/7
+                               y: 300
+                           }
+                           Row {
+                             anchors.centerIn: parent
+                             AppButton {
+                               text: "ل"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+                             }
+                             AppButton {
+                               text: "أ"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+
+                             }
+                             AppButton {
+                               text: "غ"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "green"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked:{
+                                   scoreID21.text="Score: 21"
+                                   clicksound.play()
+
+                   }
+
+                             }
+                             AppButton {
+                               text: "ع"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             Row{
+                             AppButton{
+                                 text: " Next  "
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(intermediatePage22)
+                                 }
+
+                                 x:-120
+                                 y:150
+                             }
+                             AppButton{
+                                 text: "MainPage"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(mainPage)
+                                 }
+                                 x:80
+                                 y:150
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                             }
+                             AppButton{
+                                 text: "Exit"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     byebye.play()
+                                     Qt.quit()
+                                 }
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                                 x:250
+                                 y:150
+
+
+                             }
+                             }
+                           }
+                         }
+                       }
+                       }
+
+                       Component {
+                         id: intermediatePage22
+                         Page {
+                           title: "Intermediate Level"
+                           BackgroundImage{
+                               anchors.fill: parent
+                               source: "../pages.jpg"
+
+                           AppText{
+                               text: "Choose The Correct Letter To Complete The Word"
+                               fontSize: 35
+                               topPadding:15
+                               x:200
+                               color: "white"
+
+                           }
+                           AppText{
+                               text: "م     -      ع       ق       ة"
+                               fontSize: 40
+                               x:parent.width /2
+                               y:300
+                               color: "black"
+                           }
+
+                           AppText{
+                               id: scoreID22
+                               color: "black"
+                               font.pixelSize: 25
+                               font.bold: true
+                               text: "Score: 21"
+                               x: parent.width/7
+                               y: 300
+                           }
+                           Row {
+                             anchors.centerIn: parent
+                             AppButton {
+                               text: "ف"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+                             }
+                             AppButton {
+                               text: "ل"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "green"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked:{
+                                   scoreID22.text="Score: 22"
+                                   clicksound.play()
+                   }
+
+
+
+                             }
+                             AppButton {
+                               text: "ق"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             AppButton {
+                               text: "خ"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             Row{
+                             AppButton{
+                                 text: " Next  "
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(intermediatePage23)
+                                 }
+
+                                 x:-120
+                                 y:150
+                             }
+                             AppButton{
+                                 text: "MainPage"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(mainPage)
+                                 }
+                                 x:80
+                                 y:150
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                             }
+                             AppButton{
+                                 text: "Exit"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     byebye.play()
+                                     Qt.quit()
+                                 }
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                                 x:250
+                                 y:150
+
+
+                             }
+                             }
+                           }
+                         }
+                       }
+                       }
+
+                       Component {
+                         id: intermediatePage23
+                         Page {
+                           title: "Intermediate Level"
+                           BackgroundImage{
+                               anchors.fill: parent
+                               source: "../pages.jpg"
+
+                           AppText{
+                               text: "Choose The Correct Letter To Complete The Word"
+                               fontSize: 35
+                               topPadding:15
+                               x:200
+                               color: "white"
+
+                           }
+                           AppText{
+                               text: "-      ح        ل        ة"
+                               fontSize: 40
+                               x:parent.width /2
+                               y:300
+                               color: "black"
+                           }
+                           AppText{
+                               id: scoreID23
+                               color: "black"
+                               font.pixelSize: 25
+                               font.bold: true
+                               text: "Score: 22"
+                               x: parent.width/7
+                               y: 300
+                           }
+
+                           Row {
+                             anchors.centerIn: parent
+                             AppButton {
+                               text: "ن"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "green"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked:{
+                                   scoreID23.text = "Score: 23"
+                                   clicksound.play()
+                   }
+
+                             }
+                             AppButton {
+                               text: "و"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+
+                             }
+                             AppButton {
+                               text: "ض"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             AppButton {
+                               text: "د"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             Row{
+                             AppButton{
+                                 text: " Next  "
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(intermediatePage24)
+                                 }
+
+                                 x:-120
+                                 y:150
+                             }
+                             AppButton{
+                                 text: "MainPage"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(mainPage)
+                                 }
+                                 x:80
+                                 y:150
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                             }
+                             AppButton{
+                                 text: "Exit"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     byebye.play()
+                                     Qt.quit()
+                                 }
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                                 x:250
+                                 y:150
+
+
+                             }
+                             }
+                           }
+                         }
+                       }
+                       }
+
+
+                       Component {
+                         id: intermediatePage24
+                         Page {
+                           title: "Intermediate Level"
+                           BackgroundImage{
+                               anchors.fill: parent
+                               source: "../pages.jpg"
+
+                           AppText{
+                               text: "Choose The Correct Letter To Complete The Word"
+                               fontSize: 35
+                               topPadding:15
+                               x:200
+                               color: "white"
+
+                           }
+                           AppText{
+                               text: "ف        ا        ك       -      ة"
+                               fontSize: 40
+                               x:parent.width /2
+                               y:300
+                               color: "black"
+                           }
+
+                           AppText{
+                               id: scoreID24
+                               color: "black"
+                               font.pixelSize: 25
+                               font.bold: true
+                               text: "Score: 23"
+                               x: parent.width/7
+                               y: 300
+                           }
+                           Row {
+                             anchors.centerIn: parent
+                             AppButton {
+                               text: "ط"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+                             }
+                             AppButton {
+                                 text: "ه"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "green"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked:{
+                                   scoreID24.text = "Score: 24"
+                                   clicksound.play()
+                   }
+
+
+
+                             }
+                             AppButton {
+                               text: "ي"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             AppButton {
+                               text: "خ"
+                               textColor: "black"
+                               backgroundColor: "lightsteelblue"
+                               backgroundColorPressed: "red"
+                               textSize: 32
+                               width: 150
+                               height: 80
+                               radius: 100
+                               fontBold: true
+                               onClicked: wronganswer.play()
+
+
+
+                             }
+                             Row{
+                             AppButton{
+                                 text: " Next  "
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(intermediatePage25)
+                                 }
+
+                                 x:-120
+                                 y:150
+                             }
+                             AppButton{
+                                 text: "MainPage"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     buttonss.play()
+                                     mainPage.navigationStack.push(mainPage)
+                                 }
+                                 x:80
+                                 y:150
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                             }
+                             AppButton{
+                                 text: "Exit"
+                                 textColor: "black"
+                                 backgroundColor: "lightsteelblue"
+                                 onClicked:{
+                                     byebye.play()
+                                     Qt.quit()
+                                 }
+                                 textSize: 32
+                                 width: 150
+                                 height: 80
+                                 radius: 100
+                                 fontBold: true
+                                 x:250
+                                 y:150
+
+
+                             }
+                             }
+                           }
+                              }
+                            }
+                            }
+
+                            Component {
+                              id: intermediatePage25
+                              Page {
+                                title: "Intermediate Level"
+                                BackgroundImage{
+                                    anchors.fill: parent
+                                    source: "../pages.jpg"
+
+                                AppText{
+                                    text: "Choose The Correct Letter To Complete The Word"
+                                    fontSize: 35
+                                    topPadding:15
+                                    x:200
+                                    color: "white"
+
+                                }
+                                AppText{
+                                    text: "ه        ج         -        م"
+                                    fontSize: 40
+                                    x:parent.width /2
+                                    y:300
+                                    color: "black"
+                                }
+
+                                AppText{
+                                    id: scoreID25
+                                    color: "black"
+                                    font.pixelSize: 25
+                                    font.bold: true
+                                    text: "Score: 24"
+                                    x: parent.width/7
+                                    y: 300
+                                }
+                                Row {
+                                  anchors.centerIn: parent
+                                  AppButton {
+                                    text: "ز"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    backgroundColorPressed: "red"
+                                    textSize: 32
+                                    width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                    onClicked: wronganswer.play()
+
+
+                                  }
+                                  AppButton {
+                                    text: "ز"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    backgroundColorPressed: "red"
+                                    textSize: 32
+                                    width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                    onClicked: wronganswer.play()
+
+
+
+
+                                  }
+                                  AppButton {
+                                    text: "و"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    backgroundColorPressed: "green"
+                                    textSize: 32
+                                    width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                    onClicked:{
+                                        scoreID25.text="Score: 25"
+                                        clicksound.play()
+                        }
+
+
+                                  }
+                                  AppButton {
+                                    text: "د"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    backgroundColorPressed: "red"
+                                    textSize: 32
+                                    width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                    onClicked: wronganswer.play()
+
+
+
+                                  }
+                                  Row{
+                                  AppButton{
+                                      text: " Next  "
+                                      textColor: "black"
+                                      backgroundColor: "lightsteelblue"
+                                      textSize: 32
+                                      width: 150
+                                      height: 80
+                                      radius: 100
+                                      fontBold: true
+
+                                      onClicked:{
+                                          buttonss.play()
+                                          mainPage.navigationStack.push(intermediatePage26)
+                                      }
+
+                                      x:-120
+                                      y:150
+                                  }
+                                  AppButton{
+                                      text: "MainPage"
+                                      textColor: "black"
+                                      backgroundColor: "lightsteelblue"
+                                      onClicked:{
+                                          buttonss.play()
+                                          mainPage.navigationStack.push(mainPage)
+                                      }
+                                      x:80
+                                      y:150
+                                      textSize: 32
+                                      width: 150
+                                      height: 80
+                                      radius: 100
+                                      fontBold: true
+                                  }
+                                  AppButton{
+                                      text: "Exit"
+                                      textColor: "black"
+                                      backgroundColor: "lightsteelblue"
+                                      onClicked:{
+                                          byebye.play()
+                                          Qt.quit()
+                                      }
+                                      textSize: 32
+                                      width: 150
+                                      height: 80
+                                      radius: 100
+                                      fontBold: true
+                                      x:250
+                                      y:150
+
+
+                                  }
+                                  }
+                                }
+                              }
+                            }
+                            }
+
+                            Component {
+                              id: intermediatePage26
+                              Page {
+                                title: "Intermediate Level"
+                                BackgroundImage{
+                                    anchors.fill: parent
+                                    source: "../pages.jpg"
+
+                                AppText{
+                                    text: "Choose The Correct Letter To Complete The Word"
+                                    fontSize: 35
+                                    topPadding:15
+                                    x:200
+                                    color: "white"
+
+                                }
+                                AppText{
+                                    text: "م        -         ح       ف"
+                                    fontSize: 40
+                                    x:parent.width /2
+                                    y:300
+                                    color: "black"
+                                }
+                                AppText{
+                                    id: scoreID26
+                                    color: "black"
+                                    font.pixelSize: 25
+                                    font.bold: true
+                                    text: "Score: 25"
+                                    x: parent.width/7
+                                    y: 300
+                                }
+
+                                Row {
+                                  anchors.centerIn: parent
+                                  AppButton {
+                                    text: "ط"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    backgroundColorPressed: "red"
+                                    textSize: 32
+                                    width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                    onClicked: wronganswer.play()
+
+
+                                  }
+                                  AppButton {
+                                    text: "ج"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    backgroundColorPressed: "red"
+                                    textSize: 32
+                                    width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                    onClicked: wronganswer.play()
+
+
+
+
+                                  }
+                                  AppButton {
+                                    text: "ض"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    backgroundColorPressed: "red"
+                                    textSize: 32
+                                    width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                    onClicked: wronganswer.play()
+
+
+
+                                  }
+                                  AppButton {
+                                    text: "ص"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    backgroundColorPressed: "green"
+                                    textSize: 32
+                                    width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                    onClicked:{
+                                        scoreID26.text="Score: 26"
+                                        clicksound.play()
+                        }
+
+
+                                  }
+                                  Row{
+                                  AppButton{
+                                      text: " Next  "
+                                      textColor: "black"
+                                      backgroundColor: "lightsteelblue"
+                                      textSize: 32
+                                      width: 150
+                                      height: 80
+                                      radius: 100
+                                      fontBold: true
+
+                                      onClicked:{
+                                          buttonss.play()
+                                          mainPage.navigationStack.push(intermediatePage27)
+                                      }
+
+                                      x:-120
+                                      y:150
+                                  }
+                                  AppButton{
+                                      text: "MainPage"
+                                      textColor: "black"
+                                      backgroundColor: "lightsteelblue"
+                                      onClicked:{
+                                          buttonss.play()
+                                          mainPage.navigationStack.push(mainPage)
+                                      }
+                                      x:80
+                                      y:150
+                                      textSize: 32
+                                      width: 150
+                                      height: 80
+                                      radius: 100
+                                      fontBold: true
+                                  }
+                                  AppButton{
+                                      text: "Exit"
+                                      textColor: "black"
+                                      backgroundColor: "lightsteelblue"
+                                      onClicked:{
+                                          byebye.play()
+                                          Qt.quit()
+                                      }
+                                      textSize: 32
+                                      width: 150
+                                      height: 80
+                                      radius: 100
+                                      fontBold: true
+                                      x:250
+                                      y:150
+
+
+                                  }
+                                  }
+                                }
+                              }
+                            }
+                            }
+
+
+                            Component {
+                              id: intermediatePage27
+                              Page {
+                                title: "Intermediate Level"
+                                BackgroundImage{
+                                    anchors.fill: parent
+                                    source: "../pages.jpg"
+
+                                AppText{
+                                    text: "Choose The Correct Letter To Complete The Word"
+                                    fontSize: 35
+                                    topPadding:15
+                                    x:200
+                                    color: "white"
+
+                                }
+                                AppText{
+                                    text: "م        ر         ي         -"
+                                    fontSize: 40
+                                    x:parent.width /2
+                                    y:300
+                                    color: "black"
+                                }
+                                AppText{
+                                    id: scoreID27
+                                    color: "black"
+                                    font.pixelSize: 25
+                                    font.bold: true
+                                    text: "Score: 26"
+                                    x: parent.width/7
+                                    y: 300
+                                }
+
+                                Row {
+                                  anchors.centerIn: parent
+                                  AppButton {
+                                    text: "ص"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    backgroundColorPressed: "red"
+                                    textSize: 32
+                                    width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                    onClicked: wronganswer.play()
+
+
+                                  }
+                                  AppButton {
+                                    text: "ض"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    backgroundColorPressed: "green"
+                                    textSize: 32
+                                    width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                    onClicked:{
+                                        scoreID27.text="Score: 27"
+                                        clicksound.play()
+                        }
+
+
+
+                                  }
+                                  AppButton {
+                                    text: "ب"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    backgroundColorPressed: "red"
+                                    textSize: 32
+                                    width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                    onClicked: wronganswer.play()
+
+
+
+                                  }
+                                  AppButton {
+                                    text: "ث"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    backgroundColorPressed: "red"
+                                    textSize: 32
+                                    width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                    onClicked: wronganswer.play()
+
+
+
+                                  }
+                                  Row{
+                                  AppButton{
+                                      text: " Next  "
+                                      textColor: "black"
+                                      backgroundColor: "lightsteelblue"
+                                      textSize: 32
+                                      width: 150
+                                      height: 80
+                                      radius: 100
+                                      fontBold: true
+
+                                      onClicked:{
+                                          buttonss.play()
+                                          mainPage.navigationStack.push(intermediatePage28)
+                                      }
+
+                                      x:-120
+                                      y:150
+                                  }
+                                  AppButton{
+                                      text: "MainPage"
+                                      textColor: "black"
+                                      backgroundColor: "lightsteelblue"
+                                      onClicked:{
+                                          buttonss.play()
+                                          mainPage.navigationStack.push(mainPage)
+                                      }
+                                      x:80
+                                      y:150
+                                      textSize: 32
+                                      width: 150
+                                      height: 80
+                                      radius: 100
+                                      fontBold: true
+                                  }
+                                  AppButton{
+                                      text: "Exit"
+                                      textColor: "black"
+                                      backgroundColor: "lightsteelblue"
+                                      onClicked:{
+                                          byebye.play()
+                                          Qt.quit()
+                                      }
+                                      textSize: 32
+                                      width: 150
+                                      height: 80
+                                      radius: 100
+                                      fontBold: true
+                                      x:250
+                                      y:150
+
+
+                                  }
+                                  }
+                                }
+                              }
+                            }
+                            }
+
+
+                            Component {
+                              id: intermediatePage28
+                              Page {
+                                title: "Intermediate Level"
+                                BackgroundImage{
+                                    anchors.fill: parent
+                                    source: "../pages.jpg"
+
+                                AppText{
+                                    text: "Choose The Correct Letter To Complete The Word"
+                                    fontSize: 35
+                                    topPadding:15
+                                    x:200
+                                    color: "white"
+
+                                }
+                                AppText{
+                                    text: "ر      -       ا        ض       ة"
+                                    fontSize: 40
+                                    x:parent.width /2
+                                    y:300
+                                    color: "black"
+                                }
+
+                                AppText{
+                                    id: scoreID28
+                                    color: "black"
+                                    font.pixelSize: 25
+                                    font.bold: true
+                                    text: "Score: 27"
+                                    x: parent.width/7
+                                    y: 300
+                                }
+                                Row {
+                                  anchors.centerIn: parent
+                                  AppButton {
+                                    text: "ي"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    backgroundColorPressed: "green"
+                                    textSize: 32
+                                    width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                    onClicked:{
+                                        scoreID28.text= "Score: 28"
+                                        clicksound.play()
+                        }
+
+                                  }
+                                  AppButton {
+                                    text: "ك"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    backgroundColorPressed: "red"
+                                    textSize: 32
+                                    width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                    onClicked: wronganswer.play()
+
+
+
+
+                                  }
+                                  AppButton {
+                                    text: "ط"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    backgroundColorPressed: "red"
+                                    textSize: 32
+                                    width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                    onClicked: wronganswer.play()
+
+
+
+                                  }
+                                  AppButton {
+                                    text: "ش"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    backgroundColorPressed: "red"
+                                    textSize: 32
+                                    width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                    onClicked: wronganswer.play()
+
+
+
+                                  }
+                                  Row{
+                                  AppButton{
+                                      text: " Next  "
+                                      textColor: "black"
+                                      backgroundColor: "lightsteelblue"
+                                      textSize: 32
+                                      width: 150
+                                      height: 80
+                                      radius: 100
+                                      fontBold: true
+
+                                      onClicked:{
+                                          buttonss.play()
+                                          mainPage.navigationStack.push(intermediatePage29)
+                                      }
+
+                                      x:-120
+                                      y:150
+                                  }
+                                  AppButton{
+                                      text: "MainPage"
+                                      textColor: "black"
+                                      backgroundColor: "lightsteelblue"
+                                      onClicked:{
+                                          buttonss.play()
+                                          mainPage.navigationStack.push(mainPage)
+                                      }
+                                      x:80
+                                      y:150
+                                      textSize: 32
+                                      width: 150
+                                      height: 80
+                                      radius: 100
+                                      fontBold: true
+                                  }
+                                  AppButton{
+                                      text: "Exit"
+                                      textColor: "black"
+                                      backgroundColor: "lightsteelblue"
+                                      onClicked:{
+                                          byebye.play()
+                                          Qt.quit()
+                                      }
+                                      textSize: 32
+                                      width: 150
+                                      height: 80
+                                      radius: 100
+                                      fontBold: true
+                                      x:250
+                                      y:150
+
+
+                                  }
+                                  }
+                                }
+                              }
+                            }
+                            }
+                            Component {
+                              id: intermediatePage29
+                              Page {
+                                title: "Intermediate Level "
+                                BackgroundImage{
+                                    anchors.fill: parent
+                                    source: "../pages.jpg"
+
+
+                        }
+                                Text {
+                                    anchors.centerIn: parent
+                                    text: qsTr("Congratulations You Passed The Intermediate Level Successfully")
+                                    font.bold: true
+                                    font.pointSize: 20
+                                    color: "#3D35D3"
+                                }
+                                AppButton{
+                                    text: "MainPage"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    onClicked:{
+                                        buttonss.play()
+                                        background.play()
+                                        mainPage.navigationStack.push(mainPage)
+                                    }
+                                    x:550
+                                    y:600
+                                    textSize: 32
+                                   // width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                }
+                                AppButton{
+                                    text: "Exit"
+                                    textColor: "black"
+                                    backgroundColor: "lightsteelblue"
+                                    onClicked:{
+                                        byebye.play()
+                                        Qt.quit()
+                                    }
+                                    textSize: 32
+                                    width: 150
+                                    height: 80
+                                    radius: 100
+                                    fontBold: true
+                                    x:770
+                                    y:600
+
+
+                                }
+
+
+                              }
+                        }
+
+
 
 }
 
