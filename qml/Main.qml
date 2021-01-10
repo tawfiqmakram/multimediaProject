@@ -4808,6 +4808,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 0"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -4821,8 +4830,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
-
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 1"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage2)
+            }
           }
           AppButton {
             text: "بطة"
@@ -4872,28 +4885,6 @@ App {
 
           }
           Row{
-
-          AppButton{
-
-
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-              x:-120
-              y:150
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage2)
-              }
-
-
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -4955,6 +4946,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 1"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -4983,7 +4983,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 2"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage3)
+            }
 
 
           }
@@ -5016,24 +5021,6 @@ App {
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage3)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -5094,6 +5081,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 2"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -5136,7 +5132,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 3"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage4)
+            }
 
 
 
@@ -5157,24 +5158,6 @@ App {
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage4)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -5235,6 +5218,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 3"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -5290,28 +5282,15 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 4"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage5)
+            }
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage5)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -5372,6 +5351,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 4"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -5427,28 +5415,15 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 5"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage6)
+            }
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage6)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -5511,6 +5486,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 5"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -5552,7 +5536,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 6"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage7)
+            }
 
           }
           AppButton {
@@ -5570,24 +5559,6 @@ App {
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage7)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -5648,6 +5619,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 6"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -5689,7 +5669,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 7"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage8)
+            }
 
           }
           AppButton {
@@ -5706,24 +5691,6 @@ App {
             onClicked: wronganswer.play()
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage8)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -5785,6 +5752,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 7"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -5798,7 +5774,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 8"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage9)
+            }
           }
           AppButton {
             text: "باب"
@@ -5844,24 +5825,6 @@ App {
             onClicked: wronganswer.play()
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage9)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -5924,6 +5887,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 8"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -5965,7 +5937,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 9"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage10)
+            }
 
 
           }
@@ -5984,24 +5961,6 @@ App {
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage10)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -6063,6 +6022,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 9"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -6116,28 +6084,15 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 10"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage11)
+            }
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage11)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -6200,6 +6155,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 10"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -6213,7 +6177,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 11"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage12)
+            }
           }
           AppButton {
             text: "فاكهة"
@@ -6257,24 +6226,6 @@ App {
             onClicked: wronganswer.play()
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage12)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -6335,6 +6286,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 11"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -6361,7 +6321,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 12"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage13)
+            }
 
           }
           AppButton {
@@ -6393,24 +6358,6 @@ App {
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage13)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -6471,6 +6418,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 12"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -6511,7 +6467,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 13"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage14)
+            }
 
           }
           AppButton {
@@ -6529,24 +6490,6 @@ App {
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage14)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -6608,6 +6551,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 13"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -6621,7 +6573,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 14"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage15)
+            }
           }
           AppButton {
             text: "مساء"
@@ -6666,24 +6623,6 @@ App {
             onClicked: wronganswer.play()
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage15)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -6744,6 +6683,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 14"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -6770,7 +6718,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 15"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage16)
+            }
 
           }
           AppButton {
@@ -6803,24 +6756,6 @@ App {
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage16)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -6881,6 +6816,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 15"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -6907,7 +6851,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 16"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage17)
+            }
 
           }
           AppButton {
@@ -6939,24 +6888,6 @@ App {
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage17)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -7017,6 +6948,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 16"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -7030,7 +6970,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 17"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage18)
+            }
           }
           AppButton {
             text: "لاعب"
@@ -7075,24 +7020,6 @@ App {
             onClicked: wronganswer.play()
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage18)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -7153,6 +7080,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 17"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -7207,28 +7143,15 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 18"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage19)
+            }
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage19)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -7289,6 +7212,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 18"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -7329,8 +7261,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
-
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 19"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage20)
+            }
           }
           AppButton {
             text: "شجرة"
@@ -7347,24 +7283,6 @@ App {
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage20)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -7425,6 +7343,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 19"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -7451,7 +7378,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 20"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage21)
+            }
 
 
           }
@@ -7484,24 +7416,6 @@ App {
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage21)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -7562,6 +7476,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 20"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -7575,7 +7498,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 21"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage22)
+            }
           }
           AppButton {
             text: "جامعة"
@@ -7621,24 +7549,6 @@ App {
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage22)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -7699,6 +7609,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 21"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -7738,7 +7657,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 22"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage23)
+            }
 
           }
           AppButton {
@@ -7756,24 +7680,6 @@ App {
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage23)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -7834,6 +7740,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 22"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -7889,28 +7804,15 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 23"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage24)
+            }
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage24)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -7971,6 +7873,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 23"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -7997,7 +7908,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 24"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage25)
+            }
 
 
           }
@@ -8030,24 +7946,6 @@ App {
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage25)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -8108,6 +8006,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 24"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -8149,7 +8056,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 25"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage26)
+            }
 
           }
           AppButton {
@@ -8167,24 +8079,6 @@ App {
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage26)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -8245,6 +8139,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 25"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -8272,7 +8175,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 26"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage27)
+            }
 
 
           }
@@ -8305,24 +8213,6 @@ App {
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage27)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -8383,6 +8273,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 26"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -8424,7 +8323,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 27"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage28)
+            }
 
           }
           AppButton {
@@ -8443,24 +8347,6 @@ App {
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage28)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -8522,6 +8408,15 @@ App {
             font.bold: true
             font.capitalization: Font.AllUppercase
         }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 27"
+            x: parent.width/7
+            y: 300
+        }
         Row {
           anchors.centerIn: parent
           AppButton {
@@ -8551,7 +8446,12 @@ App {
             height: 80
             radius: 100
             fontBold: true
-            onClicked: clicksound.play()
+            onClicked:{
+                clicksound.play()
+                scoreID1.text ="Score: 28"
+                buttonss.play()
+                mainPage.navigationStack.push(professionalPage29)
+            }
 
 
           }
@@ -8584,24 +8484,6 @@ App {
 
           }
           Row{
-          AppButton{
-              text: " Next  "
-              textColor: "black"
-              backgroundColor: "lightsteelblue"
-              textSize: 32
-              width: 150
-              height: 80
-              radius: 100
-              fontBold: true
-
-              onClicked:{
-                  buttonss.play()
-                  mainPage.navigationStack.push(professionalPage29)
-              }
-
-              x:-120
-              y:150
-          }
           AppButton{
               text: "MainPage"
               textColor: "black"
@@ -8657,6 +8539,15 @@ App {
             font.bold: true
             font.pointSize: 20
             color: "#3D35D3"
+        }
+        AppText{
+            id: scoreID1
+            color: "black"
+            font.pixelSize: 25
+            font.bold: true
+            text: "Score: 28"
+            x: parent.width/7
+            y: 300
         }
         AppButton{
             text: "MainPage"
@@ -8779,8 +8670,11 @@ App {
 
                     clicksound.play()
                     scoreID1.text ="Score: 1"
+                    buttonss.play()
+                    mainPage.navigationStack.push(intermediatePage2)
 
-    }
+                }
+
 
               }
               AppButton {
@@ -8799,24 +8693,6 @@ App {
 
               }
               Row{
-              AppButton{
-                  text: " Next  "
-                  textColor: "black"
-                  backgroundColor: "lightsteelblue"
-                  textSize: 32
-                  width: 150
-                  height: 80
-                  radius: 100
-                  fontBold: true
-
-                  onClicked:{
-                      buttonss.play()
-                      mainPage.navigationStack.push(intermediatePage2)
-                  }
-
-                  x:-120
-                  y:150
-              }
               AppButton{
                   text: "MainPage"
                   textColor: "black"
@@ -8908,6 +8784,8 @@ App {
 
                     clicksound.play()
                     scoreID2.text ="Score: 2"
+                    buttonss.play()
+                    mainPage.navigationStack.push(intermediatePage3)
 
     }
 
@@ -8959,24 +8837,6 @@ App {
 
               }
               Row{
-              AppButton{
-                  text: " Next  "
-                  textColor: "black"
-                  backgroundColor: "lightsteelblue"
-                  textSize: 32
-                  width: 150
-                  height: 80
-                  radius: 100
-                  fontBold: true
-
-                  onClicked:{
-                      buttonss.play()
-                      mainPage.navigationStack.push(intermediatePage3)
-                  }
-
-                  x:-120
-                  y:150
-              }
               AppButton{
                   text: "MainPage"
                   textColor: "black"
@@ -9081,6 +8941,8 @@ App {
 
                     scoreID3.text = "Score: 3"
                     clicksound.play()
+                    buttonss.play()
+                    mainPage.navigationStack.push(intermediatePage4)
 
     }
 
@@ -9117,24 +8979,6 @@ App {
 
               }
               Row{
-              AppButton{
-                  text: " Next  "
-                  textColor: "black"
-                  backgroundColor: "lightsteelblue"
-                  textSize: 32
-                  width: 150
-                  height: 80
-                  radius: 100
-                  fontBold: true
-
-                  onClicked:{
-                      buttonss.play()
-                      mainPage.navigationStack.push(intermediatePage4)
-                  }
-
-                  x:-120
-                  y:150
-              }
               AppButton{
                   text: "MainPage"
                   textColor: "black"
@@ -9227,6 +9071,8 @@ App {
                     onClicked:{
                         clicksound.play()
                         scoreID4.text= "Score: 4"
+                        buttonss.play()
+                        mainPage.navigationStack.push(intermediatePage5)
                     }
 
                   }
@@ -9277,24 +9123,6 @@ App {
 
                   }
                   Row{
-                  AppButton{
-                      text: " Next  "
-                      textColor: "black"
-                      backgroundColor: "lightsteelblue"
-                      textSize: 32
-                      width: 150
-                      height: 80
-                      radius: 100
-                      fontBold: true
-
-                      onClicked:{
-                          buttonss.play()
-                          mainPage.navigationStack.push(intermediatePage5)
-                      }
-
-                      x:-120
-                      y:150
-                  }
                   AppButton{
                       text: "MainPage"
                       textColor: "black"
@@ -9430,28 +9258,12 @@ App {
                     onClicked:{
                         clicksound.play()
                         scoreID5.text="Score: 5"
+                        buttonss.play()
+                        mainPage.navigationStack.push(intermediatePage6)
                     }
 
                   }
                   Row{
-                  AppButton{
-                      text: " Next  "
-                      textColor: "black"
-                      backgroundColor: "lightsteelblue"
-                      textSize: 32
-                      width: 150
-                      height: 80
-                      radius: 100
-                      fontBold: true
-
-                      onClicked:{
-                          buttonss.play()
-                          mainPage.navigationStack.push(intermediatePage6)
-                      }
-
-                      x:-120
-                      y:150
-                  }
                   AppButton{
                       text: "MainPage"
                       textColor: "black"
@@ -9542,6 +9354,8 @@ App {
                     onClicked:{
                      scoreID6.text= "Score: 6"
                         clicksound.play()
+                        buttonss.play()
+                        mainPage.navigationStack.push(intermediatePage7)
                     }
 
                   }
@@ -9592,24 +9406,6 @@ App {
 
                   }
                   Row{
-                  AppButton{
-                      text: " Next  "
-                      textColor: "black"
-                      backgroundColor: "lightsteelblue"
-                      textSize: 32
-                      width: 150
-                      height: 80
-                      radius: 100
-                      fontBold: true
-
-                      onClicked:{
-                          buttonss.play()
-                          mainPage.navigationStack.push(intermediatePage7)
-                      }
-
-                      x:-120
-                      y:150
-                  }
                   AppButton{
                       text: "MainPage"
                       textColor: "black"
@@ -9728,6 +9524,8 @@ App {
                        onClicked: {
                         scoreID7.text= "Score: 7"
                            clicksound.play()
+                           buttonss.play()
+                           mainPage.navigationStack.push(intermediatePage8)
                        }
 
 
@@ -9748,24 +9546,6 @@ App {
 
                      }
                      Row{
-                     AppButton{
-                         text: " Next  "
-                         textColor: "black"
-                         backgroundColor: "lightsteelblue"
-                         textSize: 32
-                         width: 150
-                         height: 80
-                         radius: 100
-                         fontBold: true
-
-                         onClicked:{
-                             buttonss.play()
-                             mainPage.navigationStack.push(intermediatePage8)
-                         }
-
-                         x:-120
-                         y:150
-                     }
                      AppButton{
                          text: "MainPage"
                          textColor: "black"
@@ -9884,6 +9664,8 @@ App {
                        onClicked:{
                         scoreID8.text = "Score: 8"
                            clicksound.play()
+                           buttonss.play()
+                           mainPage.navigationStack.push(intermediatePage9)
                        }
 
 
@@ -9904,24 +9686,6 @@ App {
 
                      }
                      Row{
-                     AppButton{
-                         text: " Next  "
-                         textColor: "black"
-                         backgroundColor: "lightsteelblue"
-                         textSize: 32
-                         width: 150
-                         height: 80
-                         radius: 100
-                         fontBold: true
-
-                         onClicked:{
-                             buttonss.play()
-                             mainPage.navigationStack.push(intermediatePage9)
-                         }
-
-                         x:-120
-                         y:150
-                     }
                      AppButton{
                          text: "MainPage"
                          textColor: "black"
@@ -10026,6 +9790,8 @@ App {
                        onClicked:{
                            scoreID9.text = "Score: 9"
                            clicksound.play()
+                           buttonss.play()
+                           mainPage.navigationStack.push(intermediatePage10)
                        }
 
 
@@ -10062,25 +9828,6 @@ App {
 
                      }
                      Row{
-                     AppButton{
-                         text: " Next  "
-
-                         textColor: "black"
-                         backgroundColor: "lightsteelblue"
-                         textSize: 32
-                         width: 150
-                         height: 80
-                         radius: 100
-                         fontBold: true
-
-                         onClicked:{
-                             buttonss.play()
-                             mainPage.navigationStack.push(intermediatePage10)
-                         }
-
-                         x:-120
-                         y:150
-                     }
                      AppButton{
                          text: "MainPage"
                          textColor: "black"
@@ -10200,6 +9947,8 @@ App {
                        onClicked:{
                            scoreID10.text= "Score: 10"
                            clicksound.play()
+                           buttonss.play()
+                           mainPage.navigationStack.push(intermediatePage11)
 
            }
 
@@ -10220,24 +9969,6 @@ App {
 
                      }
                      Row{
-                     AppButton{
-                         text: " Next  "
-                         textColor: "black"
-                         backgroundColor: "lightsteelblue"
-                         textSize: 32
-                         width: 150
-                         height: 80
-                         radius: 100
-                         fontBold: true
-
-                         onClicked:{
-                             buttonss.play()
-                             mainPage.navigationStack.push(intermediatePage11)
-                         }
-
-                         x:-120
-                         y:150
-                     }
                      AppButton{
                          text: "MainPage"
                          textColor: "black"
@@ -10329,6 +10060,8 @@ App {
                        onClicked:{
                            clicksound.play()
                        scoreID11.text= "Score: 11"
+                           buttonss.play()
+                           mainPage.navigationStack.push(intermediatePage12)
            }
                      }
                      AppButton {
@@ -10378,24 +10111,6 @@ App {
 
                      }
                      Row{
-                     AppButton{
-                         text: " Next  "
-                         textColor: "black"
-                         backgroundColor: "lightsteelblue"
-                         textSize: 32
-                         width: 150
-                         height: 80
-                         radius: 100
-                         fontBold: true
-
-                         onClicked:{
-                             buttonss.play()
-                             mainPage.navigationStack.push(intermediatePage12)
-                         }
-
-                         x:-120
-                         y:150
-                     }
                      AppButton{
                          text: "MainPage"
                          textColor: "black"
@@ -10500,6 +10215,8 @@ App {
                            onClicked: {
                                scoreID12.text="Score: 12"
                                clicksound.play()
+                               buttonss.play()
+                               mainPage.navigationStack.push(intermediatePage13)
 
 
 
@@ -10536,24 +10253,6 @@ App {
 
                          }
                          Row{
-                         AppButton{
-                             text: " Next  "
-                             textColor: "black"
-                             backgroundColor: "lightsteelblue"
-                             textSize: 32
-                             width: 150
-                             height: 80
-                             radius: 100
-                             fontBold: true
-
-                             onClicked:{
-                                 buttonss.play()
-                                 mainPage.navigationStack.push(intermediatePage13)
-                             }
-
-                             x:-120
-                             y:150
-                         }
                          AppButton{
                              text: "MainPage"
                              textColor: "black"
@@ -10645,6 +10344,8 @@ App {
                            onClicked:{
                                scoreID13.text="Score: 13"
                                clicksound.play()
+                               buttonss.play()
+                               mainPage.navigationStack.push(intermediatePage14)
 
                }
                          }
@@ -10695,24 +10396,6 @@ App {
 
                          }
                          Row{
-                         AppButton{
-                             text: " Next  "
-                             textColor: "black"
-                             backgroundColor: "lightsteelblue"
-                             textSize: 32
-                             width: 150
-                             height: 80
-                             radius: 100
-                             fontBold: true
-
-                             onClicked:{
-                                 buttonss.play()
-                                 mainPage.navigationStack.push(intermediatePage14)
-                             }
-
-                             x:-120
-                             y:150
-                         }
                          AppButton{
                              text: "MainPage"
                              textColor: "black"
@@ -10848,29 +10531,13 @@ App {
                                onClicked:{
                                    scoreID14.text= "Score: 14"
                                    clicksound.play()
+                                   buttonss.play()
+                                   mainPage.navigationStack.push(intermediatePage15)
 
                    }
 
                              }
                              Row{
-                             AppButton{
-                                 text: " Next  "
-                                 textColor: "black"
-                                 backgroundColor: "lightsteelblue"
-                                 textSize: 32
-                                 width: 150
-                                 height: 80
-                                 radius: 100
-                                 fontBold: true
-
-                                 onClicked:{
-                                     buttonss.play()
-                                     mainPage.navigationStack.push(intermediatePage15)
-                                 }
-
-                                 x:-120
-                                 y:150
-                             }
                              AppButton{
                                  text: "MainPage"
                                  textColor: "black"
@@ -10991,6 +10658,8 @@ App {
                                onClicked:{
                                    scoreID15.text="Score: 15"
                                    clicksound.play()
+                                   buttonss.play()
+                                   mainPage.navigationStack.push(intermediatePage16)
                    }
 
 
@@ -11011,24 +10680,6 @@ App {
 
                              }
                              Row{
-                             AppButton{
-                                 text: " Next  "
-                                 textColor: "black"
-                                 backgroundColor: "lightsteelblue"
-                                 textSize: 32
-                                 width: 150
-                                 height: 80
-                                 radius: 100
-                                 fontBold: true
-
-                                 onClicked:{
-                                     buttonss.play()
-                                     mainPage.navigationStack.push(intermediatePage16)
-                                 }
-
-                                 x:-120
-                                 y:150
-                             }
                              AppButton{
                                  text: "MainPage"
                                  textColor: "black"
@@ -11120,6 +10771,8 @@ App {
                                onClicked: {
                                    scoreID16.text = "Score: 16"
                                    clicksound.play()
+                                   buttonss.play()
+                                   mainPage.navigationStack.push(intermediatePage17)
                    }
 
                              }
@@ -11170,24 +10823,6 @@ App {
 
                              }
                              Row{
-                             AppButton{
-                                 text: " Next  "
-                                 textColor: "black"
-                                 backgroundColor: "lightsteelblue"
-                                 textSize: 32
-                                 width: 150
-                                 height: 80
-                                 radius: 100
-                                 fontBold: true
-
-                                 onClicked:{
-                                     buttonss.play()
-                                     mainPage.navigationStack.push(intermediatePage17)
-                                 }
-
-                                 x:-120
-                                 y:150
-                             }
                              AppButton{
                                  text: "MainPage"
                                  textColor: "black"
@@ -11295,6 +10930,8 @@ App {
                                onClicked:{
                                    scoreID17.text = "Score: 17"
                                    clicksound.play()
+                                   buttonss.play()
+                                   mainPage.navigationStack.push(intermediatePage18)
 
 
                    }
@@ -11331,24 +10968,6 @@ App {
 
                              }
                              Row{
-                             AppButton{
-                                 text: " Next  "
-                                 textColor: "black"
-                                 backgroundColor: "lightsteelblue"
-                                 textSize: 32
-                                 width: 150
-                                 height: 80
-                                 radius: 100
-                                 fontBold: true
-
-                                 onClicked:{
-                                     buttonss.play()
-                                     mainPage.navigationStack.push(intermediatePage18)
-                                 }
-
-                                 x:-120
-                                 y:150
-                             }
                              AppButton{
                                  text: "MainPage"
                                  textColor: "black"
@@ -11451,6 +11070,8 @@ App {
                                onClicked:{
                                    scoreID18.text= "Score: 18"
                                    clicksound.play()
+                                   buttonss.play()
+                                   mainPage.navigationStack.push(intermediatePage19)
 
                    }
 
@@ -11487,24 +11108,6 @@ App {
 
                              }
                              Row{
-                             AppButton{
-                                 text: " Next  "
-                                 textColor: "black"
-                                 backgroundColor: "lightsteelblue"
-                                 textSize: 32
-                                 width: 150
-                                 height: 80
-                                 radius: 100
-                                 fontBold: true
-
-                                 onClicked:{
-                                     buttonss.play()
-                                     mainPage.navigationStack.push(intermediatePage19)
-                                 }
-
-                                 x:-120
-                                 y:150
-                             }
                              AppButton{
                                  text: "MainPage"
                                  textColor: "black"
@@ -11592,6 +11195,8 @@ App {
                                onClicked:{
                                    scoreID19.text="Score: 19"
                                    clicksound.play()
+                                   buttonss.play()
+                                   mainPage.navigationStack.push(intermediatePage20)
                    }
 
                              }
@@ -11642,24 +11247,6 @@ App {
 
                              }
                              Row{
-                             AppButton{
-                                 text: " Next  "
-                                 textColor: "black"
-                                 backgroundColor: "lightsteelblue"
-                                 textSize: 32
-                                 width: 150
-                                 height: 80
-                                 radius: 100
-                                 fontBold: true
-
-                                 onClicked:{
-                                     buttonss.play()
-                                     mainPage.navigationStack.push(intermediatePage20)
-                                 }
-
-                                 x:-120
-                                 y:150
-                             }
                              AppButton{
                                  text: "MainPage"
                                  textColor: "black"
@@ -11762,6 +11349,8 @@ App {
                                onClicked: {
                                    scoreID20.text="Score: 20"
                                    clicksound.play()
+                                   buttonss.play()
+                                   mainPage.navigationStack.push(intermediatePage21)
 
                    }
 
@@ -11798,24 +11387,6 @@ App {
 
                              }
                              Row{
-                             AppButton{
-                                 text: " Next  "
-                                 textColor: "black"
-                                 backgroundColor: "lightsteelblue"
-                                 textSize: 32
-                                 width: 150
-                                 height: 80
-                                 radius: 100
-                                 fontBold: true
-
-                                 onClicked:{
-                                     buttonss.play()
-                                     mainPage.navigationStack.push(intermediatePage21)
-                                 }
-
-                                 x:-120
-                                 y:150
-                             }
                              AppButton{
                                  text: "MainPage"
                                  textColor: "black"
@@ -11935,6 +11506,8 @@ App {
                                onClicked:{
                                    scoreID21.text="Score: 21"
                                    clicksound.play()
+                                   buttonss.play()
+                                   mainPage.navigationStack.push(intermediatePage22)
 
                    }
 
@@ -11955,24 +11528,6 @@ App {
 
                              }
                              Row{
-                             AppButton{
-                                 text: " Next  "
-                                 textColor: "black"
-                                 backgroundColor: "lightsteelblue"
-                                 textSize: 32
-                                 width: 150
-                                 height: 80
-                                 radius: 100
-                                 fontBold: true
-
-                                 onClicked:{
-                                     buttonss.play()
-                                     mainPage.navigationStack.push(intermediatePage22)
-                                 }
-
-                                 x:-120
-                                 y:150
-                             }
                              AppButton{
                                  text: "MainPage"
                                  textColor: "black"
@@ -12075,6 +11630,8 @@ App {
                                onClicked:{
                                    scoreID22.text="Score: 22"
                                    clicksound.play()
+                                   buttonss.play()
+                                   mainPage.navigationStack.push(intermediatePage23)
                    }
 
 
@@ -12111,24 +11668,6 @@ App {
 
                              }
                              Row{
-                             AppButton{
-                                 text: " Next  "
-                                 textColor: "black"
-                                 backgroundColor: "lightsteelblue"
-                                 textSize: 32
-                                 width: 150
-                                 height: 80
-                                 radius: 100
-                                 fontBold: true
-
-                                 onClicked:{
-                                     buttonss.play()
-                                     mainPage.navigationStack.push(intermediatePage23)
-                                 }
-
-                                 x:-120
-                                 y:150
-                             }
                              AppButton{
                                  text: "MainPage"
                                  textColor: "black"
@@ -12217,6 +11756,8 @@ App {
                                onClicked:{
                                    scoreID23.text = "Score: 23"
                                    clicksound.play()
+                                   buttonss.play()
+                                   mainPage.navigationStack.push(intermediatePage24)
                    }
 
                              }
@@ -12267,24 +11808,6 @@ App {
 
                              }
                              Row{
-                             AppButton{
-                                 text: " Next  "
-                                 textColor: "black"
-                                 backgroundColor: "lightsteelblue"
-                                 textSize: 32
-                                 width: 150
-                                 height: 80
-                                 radius: 100
-                                 fontBold: true
-
-                                 onClicked:{
-                                     buttonss.play()
-                                     mainPage.navigationStack.push(intermediatePage24)
-                                 }
-
-                                 x:-120
-                                 y:150
-                             }
                              AppButton{
                                  text: "MainPage"
                                  textColor: "black"
@@ -12388,6 +11911,8 @@ App {
                                onClicked:{
                                    scoreID24.text = "Score: 24"
                                    clicksound.play()
+                                   buttonss.play()
+                                   mainPage.navigationStack.push(intermediatePage25)
                    }
 
 
@@ -12424,24 +11949,6 @@ App {
 
                              }
                              Row{
-                             AppButton{
-                                 text: " Next  "
-                                 textColor: "black"
-                                 backgroundColor: "lightsteelblue"
-                                 textSize: 32
-                                 width: 150
-                                 height: 80
-                                 radius: 100
-                                 fontBold: true
-
-                                 onClicked:{
-                                     buttonss.play()
-                                     mainPage.navigationStack.push(intermediatePage25)
-                                 }
-
-                                 x:-120
-                                 y:150
-                             }
                              AppButton{
                                  text: "MainPage"
                                  textColor: "black"
@@ -12560,6 +12067,8 @@ App {
                                     onClicked:{
                                         scoreID25.text="Score: 25"
                                         clicksound.play()
+                                        buttonss.play()
+                                        mainPage.navigationStack.push(intermediatePage26)
                         }
 
 
@@ -12580,24 +12089,6 @@ App {
 
                                   }
                                   Row{
-                                  AppButton{
-                                      text: " Next  "
-                                      textColor: "black"
-                                      backgroundColor: "lightsteelblue"
-                                      textSize: 32
-                                      width: 150
-                                      height: 80
-                                      radius: 100
-                                      fontBold: true
-
-                                      onClicked:{
-                                          buttonss.play()
-                                          mainPage.navigationStack.push(intermediatePage26)
-                                      }
-
-                                      x:-120
-                                      y:150
-                                  }
                                   AppButton{
                                       text: "MainPage"
                                       textColor: "black"
@@ -12731,29 +12222,13 @@ App {
                                     onClicked:{
                                         scoreID26.text="Score: 26"
                                         clicksound.play()
+                                        buttonss.play()
+                                        mainPage.navigationStack.push(intermediatePage27)
                         }
 
 
                                   }
                                   Row{
-                                  AppButton{
-                                      text: " Next  "
-                                      textColor: "black"
-                                      backgroundColor: "lightsteelblue"
-                                      textSize: 32
-                                      width: 150
-                                      height: 80
-                                      radius: 100
-                                      fontBold: true
-
-                                      onClicked:{
-                                          buttonss.play()
-                                          mainPage.navigationStack.push(intermediatePage27)
-                                      }
-
-                                      x:-120
-                                      y:150
-                                  }
                                   AppButton{
                                       text: "MainPage"
                                       textColor: "black"
@@ -12857,6 +12332,8 @@ App {
                                     onClicked:{
                                         scoreID27.text="Score: 27"
                                         clicksound.play()
+                                        buttonss.play()
+                                        mainPage.navigationStack.push(intermediatePage28)
                         }
 
 
@@ -12893,24 +12370,6 @@ App {
 
                                   }
                                   Row{
-                                  AppButton{
-                                      text: " Next  "
-                                      textColor: "black"
-                                      backgroundColor: "lightsteelblue"
-                                      textSize: 32
-                                      width: 150
-                                      height: 80
-                                      radius: 100
-                                      fontBold: true
-
-                                      onClicked:{
-                                          buttonss.play()
-                                          mainPage.navigationStack.push(intermediatePage28)
-                                      }
-
-                                      x:-120
-                                      y:150
-                                  }
                                   AppButton{
                                       text: "MainPage"
                                       textColor: "black"
@@ -13000,6 +12459,8 @@ App {
                                     onClicked:{
                                         scoreID28.text= "Score: 28"
                                         clicksound.play()
+                                        buttonss.play()
+                                        mainPage.navigationStack.push(intermediatePage29)
                         }
 
                                   }
@@ -13050,24 +12511,6 @@ App {
 
                                   }
                                   Row{
-                                  AppButton{
-                                      text: " Next  "
-                                      textColor: "black"
-                                      backgroundColor: "lightsteelblue"
-                                      textSize: 32
-                                      width: 150
-                                      height: 80
-                                      radius: 100
-                                      fontBold: true
-
-                                      onClicked:{
-                                          buttonss.play()
-                                          mainPage.navigationStack.push(intermediatePage29)
-                                      }
-
-                                      x:-120
-                                      y:150
-                                  }
                                   AppButton{
                                       text: "MainPage"
                                       textColor: "black"
@@ -13140,6 +12583,15 @@ App {
                                     height: 80
                                     radius: 100
                                     fontBold: true
+                                }
+                                AppText{
+                                    id: scoreID1
+                                    color: "black"
+                                    font.pixelSize: 25
+                                    font.bold: true
+                                    text: "Score: 28"
+                                    x: parent.width/7
+                                    y: 300
                                 }
                                 AppButton{
                                     text: "Exit"
